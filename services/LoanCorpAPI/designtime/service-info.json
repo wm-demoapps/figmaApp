@@ -1,0 +1,6 @@
+{
+  "id" : "LoanCorpAPI",
+  "type" : "OpenAPIService",
+  "title" : "LoanCorpAPI",
+  "mockEnabled" : false
+}

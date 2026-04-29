@@ -1,0 +1,5277 @@
+{
+  "basePath" : "${rest.LoanCorpAPI.basepath}",
+  "paths" : {
+    "/loancorp/LoanDoc/aggregations" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanDocController_getLoanDocAggregatedValues",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanDocController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns aggregated result with given aggregation info",
+        "operationId" : "LoanCorpAPI_LoanDocController_getLoanDocAggregatedValues",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "additionalProperties" : {
+                  "x-WM-TYPE_ARGUMENTS" : [ ],
+                  "$ref" : "#/definitions/Object"
+                },
+                "type" : "object"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/AggregationInfo"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "209a0d8c-9157-4c73-acf0-9f79de2f6a6d",
+          "in" : "body",
+          "name" : "AggregationInfo",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.AggregationInfo",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "aggregationInfo"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanDocController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanDoc",
+      "x-WM-TAG" : "LoanDocController",
+      "x-WM-RELATIVE_PATH" : "/aggregations",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanDoc/aggregations"
+    },
+    "/loancorp/LoanType/export" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanTypeController_exportLoanTypesAndGetURL",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanTypeController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns a URL to download a file for the data matching the optional query (q) request param and the required fields provided in the Export Options.",
+        "operationId" : "LoanCorpAPI_LoanTypeController_exportLoanTypesAndGetURL",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/StringWrapper"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/DataExportOptions"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "94077195-5131-41bf-bbd5-f7c8c5712f11",
+          "in" : "body",
+          "name" : "DataExportOptions",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.export.DataExportOptions",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "exportOptions"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanTypeController" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanType",
+      "x-WM-TAG" : "LoanTypeController",
+      "x-WM-RELATIVE_PATH" : "/export",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanType/export"
+    },
+    "/loancorp/LoanDoc/filter" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanDocController_filterLoanDocs",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanDocController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the paginated list of LoanDoc instances matching the optional query (q) request param. This API should be used only if the query string is too big to fit in GET request with request param. The request has to made in application/x-www-form-urlencoded format.",
+        "operationId" : "LoanCorpAPI_LoanDocController_filterLoanDocs",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/LoanDoc"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "fdcb88d6-00c9-4fbb-a69f-fa9c7dd33ad8",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanDocController" ],
+        "consumes" : [ "application/x-www-form-urlencoded" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanDoc",
+      "x-WM-TAG" : "LoanDocController",
+      "x-WM-RELATIVE_PATH" : "/filter",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanDoc/filter"
+    },
+    "/loancorp/LoanStatus/{id}" : {
+      "patch" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanStatusController_patchLoanStatus",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanStatusController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Partially updates the LoanStatus instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanStatusController_patchLoanStatus",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanStatus"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "3299852b-9a6c-4463-8019-fa480570b9a8",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/LoanStatus"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "545112ac-abd9-41c4-bdf5-0c1b34dbd6c7",
+          "in" : "body",
+          "name" : "LoanStatus",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.LoanStatus",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "loanStatusPatch"
+        } ],
+        "tags" : [ "LoanStatusController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanStatus",
+      "x-WM-TAG" : "LoanStatusController",
+      "x-WM-RELATIVE_PATH" : "/{id}",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanStatusController_getLoanStatus",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanStatusController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the LoanStatus instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanStatusController_getLoanStatus",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanStatus"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "7594b7f1-980e-465a-9777-b258bc2bdd38",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        } ],
+        "tags" : [ "LoanStatusController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanStatus/{id}",
+      "delete" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanStatusController_deleteLoanStatus",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanStatusController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "delete",
+        "description" : "Deletes the LoanStatus instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanStatusController_deleteLoanStatus",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "type" : "boolean"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "ccce5ee6-8496-4f5d-b829-f690057d19d2",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        } ],
+        "tags" : [ "LoanStatusController" ]
+      },
+      "put" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanStatusController_editLoanStatus",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanStatusController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "update",
+        "description" : "Updates the LoanStatus instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanStatusController_editLoanStatus",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanStatus"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "91618296-50af-4031-a527-8bf93f929d57",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/LoanStatus"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "0306ca0f-c6c3-4d1c-8384-ec5b7fa21aa5",
+          "in" : "body",
+          "name" : "LoanStatus",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.LoanStatus",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "loanStatus"
+        } ],
+        "tags" : [ "LoanStatusController" ]
+      }
+    },
+    "/loancorp/Role/count" : {
+      "x-WM-BASE_PATH" : "/loancorp/Role",
+      "x-WM-TAG" : "RoleController",
+      "x-WM-RELATIVE_PATH" : "/count",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_RoleController_countRoles",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.RoleController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the total count of Role instances matching the optional query (q) request param.",
+        "operationId" : "LoanCorpAPI_RoleController_countRoles",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "format" : "int64",
+              "type" : "integer"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "4ba935b4-7d17-4ccf-8596-9cc81d90114a",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        } ],
+        "tags" : [ "RoleController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Role/count"
+    },
+    "/loancorp/queryExecutor/queries/markOverdueEmis" : {
+      "x-WM-BASE_PATH" : "/loancorp/queryExecutor",
+      "x-WM-TAG" : "QueryExecutionController",
+      "x-WM-RELATIVE_PATH" : "/queries/markOverdueEmis",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/queryExecutor/queries/markOverdueEmis",
+      "put" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_QueryExecutionController_executeMarkOverdueEmis",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.QueryExecutionController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "update",
+        "description" : "markOverdueEmis",
+        "operationId" : "LoanCorpAPI_QueryExecutionController_executeMarkOverdueEmis",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/IntegerWrapper"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/MarkOverdueEmisRequest"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "bbb961fd-d927-4507-8e5a-75a7ac9ed45c",
+          "in" : "body",
+          "name" : "MarkOverdueEmisRequest",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.models.query.MarkOverdueEmisRequest",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "markOverdueEmisRequest"
+        } ],
+        "tags" : [ "QueryExecutionController" ]
+      }
+    },
+    "/loancorp/LoanEmi/count" : {
+      "x-WM-BASE_PATH" : "/loancorp/LoanEmi",
+      "x-WM-TAG" : "LoanEmiController",
+      "x-WM-RELATIVE_PATH" : "/count",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanEmiController_countLoanEmis",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanEmiController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the total count of LoanEmi instances matching the optional query (q) request param.",
+        "operationId" : "LoanCorpAPI_LoanEmiController_countLoanEmis",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "format" : "int64",
+              "type" : "integer"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "2fe45706-13de-47f9-820e-3095365f09d8",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        } ],
+        "tags" : [ "LoanEmiController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanEmi/count"
+    },
+    "/loancorp/LoanEmi" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanEmiController_createLoanEmi",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanEmiController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "create",
+        "description" : "Creates a new LoanEmi instance.",
+        "operationId" : "LoanCorpAPI_LoanEmiController_createLoanEmi",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanEmi"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/LoanEmi"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "9f346c78-33ef-464f-9705-026a48628ec9",
+          "in" : "body",
+          "name" : "LoanEmi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.LoanEmi",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "loanEmi"
+        } ],
+        "tags" : [ "LoanEmiController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanEmi",
+      "x-WM-TAG" : "LoanEmiController",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanEmiController_findLoanEmis",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanEmiController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "list",
+        "description" : "Returns the paginated list of LoanEmi instances matching the optional query (q) request param. If there is no query provided, it returns all the instances. Pagination & Sorting parameters such as page& size, sort can be sent as request parameters. The sort value should be a comma separated list of field names & optional sort order to sort the data on. eg: field1 asc, field2 desc etc ",
+        "operationId" : "LoanCorpAPI_LoanEmiController_findLoanEmis",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/LoanEmi"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "f19e8064-4805-4a57-9847-a45a6473151d",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanEmiController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanEmi"
+    },
+    "/loancorp/Role/filter" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_RoleController_filterRoles",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.RoleController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the paginated list of Role instances matching the optional query (q) request param. This API should be used only if the query string is too big to fit in GET request with request param. The request has to made in application/x-www-form-urlencoded format.",
+        "operationId" : "LoanCorpAPI_RoleController_filterRoles",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/Role"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "869582c7-19b7-40d9-a20b-4844d65b77f6",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "RoleController" ],
+        "consumes" : [ "application/x-www-form-urlencoded" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Role",
+      "x-WM-TAG" : "RoleController",
+      "x-WM-RELATIVE_PATH" : "/filter",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Role/filter"
+    },
+    "/loancorp/LoanDoc" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanDocController_createLoanDoc",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanDocController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "create",
+        "description" : "Creates a new LoanDoc instance.",
+        "operationId" : "LoanCorpAPI_LoanDocController_createLoanDoc",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanDoc"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/LoanDoc"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "2a65e317-b4eb-476a-b94f-05659e23384f",
+          "in" : "body",
+          "name" : "LoanDoc",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.LoanDoc",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "loanDoc"
+        } ],
+        "tags" : [ "LoanDocController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanDoc",
+      "x-WM-TAG" : "LoanDocController",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanDocController_findLoanDocs",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanDocController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "list",
+        "description" : "Returns the paginated list of LoanDoc instances matching the optional query (q) request param. If there is no query provided, it returns all the instances. Pagination & Sorting parameters such as page& size, sort can be sent as request parameters. The sort value should be a comma separated list of field names & optional sort order to sort the data on. eg: field1 asc, field2 desc etc ",
+        "operationId" : "LoanCorpAPI_LoanDocController_findLoanDocs",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/LoanDoc"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "1b771da8-d00c-46fb-bff1-33d522cea320",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanDocController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanDoc"
+    },
+    "/loancorp/LoanStatus/count" : {
+      "x-WM-BASE_PATH" : "/loancorp/LoanStatus",
+      "x-WM-TAG" : "LoanStatusController",
+      "x-WM-RELATIVE_PATH" : "/count",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanStatusController_countLoanStatuses",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanStatusController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the total count of LoanStatus instances matching the optional query (q) request param.",
+        "operationId" : "LoanCorpAPI_LoanStatusController_countLoanStatuses",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "format" : "int64",
+              "type" : "integer"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "e16bdcfe-df1b-4b3e-9353-6ce91481af0d",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        } ],
+        "tags" : [ "LoanStatusController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanStatus/count"
+    },
+    "/loancorp/Person/search" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_PersonController_searchPersonsByQueryFilters",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.PersonController",
+        "deprecated" : true,
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the list of Person instances matching the search criteria.",
+        "operationId" : "LoanCorpAPI_PersonController_searchPersonsByQueryFilters",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/Person"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        }, {
+          "schema" : {
+            "x-WM-IS_LIST" : false,
+            "type" : "array",
+            "items" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/QueryFilter"
+            }
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "08bb7996-9605-4a43-bed4-c6bb5ec8d69f",
+          "in" : "body",
+          "name" : "QueryFilter",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "queryFilters"
+        } ],
+        "tags" : [ "PersonController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Person",
+      "x-WM-TAG" : "PersonController",
+      "x-WM-RELATIVE_PATH" : "/search",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Person/search"
+    },
+    "/loancorp/Person/export" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_PersonController_exportPersonsAndGetURL",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.PersonController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns a URL to download a file for the data matching the optional query (q) request param and the required fields provided in the Export Options.",
+        "operationId" : "LoanCorpAPI_PersonController_exportPersonsAndGetURL",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/StringWrapper"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/DataExportOptions"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "8842ccd2-a2f1-464d-9cf1-1bbfd1c61fdb",
+          "in" : "body",
+          "name" : "DataExportOptions",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.export.DataExportOptions",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "exportOptions"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "PersonController" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Person",
+      "x-WM-TAG" : "PersonController",
+      "x-WM-RELATIVE_PATH" : "/export",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Person/export"
+    },
+    "/loancorp/LoanEmi/aggregations" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanEmiController_getLoanEmiAggregatedValues",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanEmiController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns aggregated result with given aggregation info",
+        "operationId" : "LoanCorpAPI_LoanEmiController_getLoanEmiAggregatedValues",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "additionalProperties" : {
+                  "x-WM-TYPE_ARGUMENTS" : [ ],
+                  "$ref" : "#/definitions/Object"
+                },
+                "type" : "object"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/AggregationInfo"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "42d87709-c3f8-4622-86a0-1eff64f01bde",
+          "in" : "body",
+          "name" : "AggregationInfo",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.AggregationInfo",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "aggregationInfo"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanEmiController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanEmi",
+      "x-WM-TAG" : "LoanEmiController",
+      "x-WM-RELATIVE_PATH" : "/aggregations",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanEmi/aggregations"
+    },
+    "/loancorp/LoanType/{id}" : {
+      "patch" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanTypeController_patchLoanType",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanTypeController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Partially updates the LoanType instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanTypeController_patchLoanType",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanType"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "9eb8d23c-28e9-4712-95a1-df3f59574830",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/LoanType"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "4fe6a830-4a45-479a-8e51-f133cf55d37d",
+          "in" : "body",
+          "name" : "LoanType",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.LoanType",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "loanTypePatch"
+        } ],
+        "tags" : [ "LoanTypeController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanType",
+      "x-WM-TAG" : "LoanTypeController",
+      "x-WM-RELATIVE_PATH" : "/{id}",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanTypeController_getLoanType",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanTypeController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the LoanType instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanTypeController_getLoanType",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanType"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "a454292c-3555-4426-bf20-bf36986dcdfc",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        } ],
+        "tags" : [ "LoanTypeController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanType/{id}",
+      "delete" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanTypeController_deleteLoanType",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanTypeController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "delete",
+        "description" : "Deletes the LoanType instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanTypeController_deleteLoanType",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "type" : "boolean"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "31783f65-3ab8-4531-9a7e-8440b05c3a46",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        } ],
+        "tags" : [ "LoanTypeController" ]
+      },
+      "put" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanTypeController_editLoanType",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanTypeController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "update",
+        "description" : "Updates the LoanType instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanTypeController_editLoanType",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanType"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "82794a8e-8804-4ac3-af31-1dab52a70593",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/LoanType"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "a9bc41f9-49a5-48a1-a075-9228e96ad36e",
+          "in" : "body",
+          "name" : "LoanType",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.LoanType",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "loanType"
+        } ],
+        "tags" : [ "LoanTypeController" ]
+      }
+    },
+    "/loancorp/LoanDoc/export" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanDocController_exportLoanDocsAndGetURL",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanDocController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns a URL to download a file for the data matching the optional query (q) request param and the required fields provided in the Export Options.",
+        "operationId" : "LoanCorpAPI_LoanDocController_exportLoanDocsAndGetURL",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/StringWrapper"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/DataExportOptions"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "a6999a1a-ae95-44e1-9bf3-c42eef8d1638",
+          "in" : "body",
+          "name" : "DataExportOptions",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.export.DataExportOptions",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "exportOptions"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanDocController" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanDoc",
+      "x-WM-TAG" : "LoanDocController",
+      "x-WM-RELATIVE_PATH" : "/export",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanDoc/export"
+    },
+    "/loancorp/Person/{email}" : {
+      "patch" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_PersonController_patchPerson",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.PersonController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Partially updates the Person instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_PersonController_patchPerson",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Person"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "9c8dfbd4-dc69-4039-8f8d-654ab9f2635e",
+          "in" : "path",
+          "name" : "email",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "email"
+        }, {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/Person"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "68285f28-450e-4d60-a882-f951e1e14ca9",
+          "in" : "body",
+          "name" : "Person",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.Person",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "personPatch"
+        } ],
+        "tags" : [ "PersonController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Person",
+      "x-WM-TAG" : "PersonController",
+      "x-WM-RELATIVE_PATH" : "/{email}",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_PersonController_getPerson",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.PersonController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the Person instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_PersonController_getPerson",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Person"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "9317708a-233f-4193-9223-51cb9df6259a",
+          "in" : "path",
+          "name" : "email",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "email"
+        } ],
+        "tags" : [ "PersonController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Person/{email}",
+      "delete" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_PersonController_deletePerson",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.PersonController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "delete",
+        "description" : "Deletes the Person instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_PersonController_deletePerson",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "type" : "boolean"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "02e086b4-fb9d-4f30-a9b6-7e0d0b97cc13",
+          "in" : "path",
+          "name" : "email",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "email"
+        } ],
+        "tags" : [ "PersonController" ]
+      },
+      "put" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_PersonController_editPerson",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.PersonController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "update",
+        "description" : "Updates the Person instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_PersonController_editPerson",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Person"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "98557946-0cc6-4c21-83eb-7478ccf8deaa",
+          "in" : "path",
+          "name" : "email",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "email"
+        }, {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/Person"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "0b8072b1-7b59-4b4c-910e-531f03b4d0ea",
+          "in" : "body",
+          "name" : "Person",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.Person",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "person"
+        } ],
+        "tags" : [ "PersonController" ]
+      }
+    },
+    "/loancorp/Loan" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanController_createLoan",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "create",
+        "description" : "Creates a new Loan instance.",
+        "operationId" : "LoanCorpAPI_LoanController_createLoan",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Loan"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/Loan"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "1fdc1120-68c5-4dc3-ad37-91aafb422f6d",
+          "in" : "body",
+          "name" : "Loan",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.Loan",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "loan"
+        } ],
+        "tags" : [ "LoanController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Loan",
+      "x-WM-TAG" : "LoanController",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanController_findLoans",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "list",
+        "description" : "Returns the paginated list of Loan instances matching the optional query (q) request param. If there is no query provided, it returns all the instances. Pagination & Sorting parameters such as page& size, sort can be sent as request parameters. The sort value should be a comma separated list of field names & optional sort order to sort the data on. eg: field1 asc, field2 desc etc ",
+        "operationId" : "LoanCorpAPI_LoanController_findLoans",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/Loan"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "206a3258-d9db-4567-9d06-27f297eae0fc",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Loan"
+    },
+    "/loancorp/LoanDoc/export/{exportType}" : {
+      "x-WM-BASE_PATH" : "/loancorp/LoanDoc",
+      "x-WM-TAG" : "LoanDocController",
+      "x-WM-RELATIVE_PATH" : "/export/{exportType}",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanDocController_exportLoanDocs",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanDocController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/octet-stream" ],
+        "description" : "Returns downloadable file for the data matching the optional query (q) request param.",
+        "operationId" : "LoanCorpAPI_LoanDocController_exportLoanDocs",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Downloadable"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "269d3a8b-1b06-44f5-aff4-aa3dd5072d53",
+          "in" : "path",
+          "name" : "exportType",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.export.ExportType",
+          "required" : true,
+          "enum" : [ "EXCEL", "CSV" ],
+          "x-WM-ORIGINAL-NAME" : "exportType"
+        }, {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "3b84eb14-237c-447f-86ac-8cbe946770e0",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanDocController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanDoc/export/{exportType}"
+    },
+    "/loancorp/Person/aggregations" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_PersonController_getPersonAggregatedValues",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.PersonController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns aggregated result with given aggregation info",
+        "operationId" : "LoanCorpAPI_PersonController_getPersonAggregatedValues",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "additionalProperties" : {
+                  "x-WM-TYPE_ARGUMENTS" : [ ],
+                  "$ref" : "#/definitions/Object"
+                },
+                "type" : "object"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/AggregationInfo"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "3d28f47c-76f0-4650-92ef-b117fa76f89e",
+          "in" : "body",
+          "name" : "AggregationInfo",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.AggregationInfo",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "aggregationInfo"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "PersonController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Person",
+      "x-WM-TAG" : "PersonController",
+      "x-WM-RELATIVE_PATH" : "/aggregations",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Person/aggregations"
+    },
+    "/loancorp/LoanType/search" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanTypeController_searchLoanTypesByQueryFilters",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanTypeController",
+        "deprecated" : true,
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the list of LoanType instances matching the search criteria.",
+        "operationId" : "LoanCorpAPI_LoanTypeController_searchLoanTypesByQueryFilters",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/LoanType"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        }, {
+          "schema" : {
+            "x-WM-IS_LIST" : false,
+            "type" : "array",
+            "items" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/QueryFilter"
+            }
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "ff3942e7-48ea-4055-a405-fd8aadf74f1d",
+          "in" : "body",
+          "name" : "QueryFilter",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "queryFilters"
+        } ],
+        "tags" : [ "LoanTypeController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanType",
+      "x-WM-TAG" : "LoanTypeController",
+      "x-WM-RELATIVE_PATH" : "/search",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanType/search"
+    },
+    "/loancorp/LoanStatus/filter" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanStatusController_filterLoanStatuses",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanStatusController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the paginated list of LoanStatus instances matching the optional query (q) request param. This API should be used only if the query string is too big to fit in GET request with request param. The request has to made in application/x-www-form-urlencoded format.",
+        "operationId" : "LoanCorpAPI_LoanStatusController_filterLoanStatuses",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/LoanStatus"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "c1d98b42-e0ab-462b-883c-bd5298f9db83",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanStatusController" ],
+        "consumes" : [ "application/x-www-form-urlencoded" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanStatus",
+      "x-WM-TAG" : "LoanStatusController",
+      "x-WM-RELATIVE_PATH" : "/filter",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanStatus/filter"
+    },
+    "/loancorp/Loan/search" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanController_searchLoansByQueryFilters",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanController",
+        "deprecated" : true,
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the list of Loan instances matching the search criteria.",
+        "operationId" : "LoanCorpAPI_LoanController_searchLoansByQueryFilters",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/Loan"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        }, {
+          "schema" : {
+            "x-WM-IS_LIST" : false,
+            "type" : "array",
+            "items" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/QueryFilter"
+            }
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "a16e0552-aba6-410b-b6f9-cf12290eb2a9",
+          "in" : "body",
+          "name" : "QueryFilter",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "queryFilters"
+        } ],
+        "tags" : [ "LoanController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Loan",
+      "x-WM-TAG" : "LoanController",
+      "x-WM-RELATIVE_PATH" : "/search",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Loan/search"
+    },
+    "/loancorp/Person" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_PersonController_createPerson",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.PersonController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "create",
+        "description" : "Creates a new Person instance.",
+        "operationId" : "LoanCorpAPI_PersonController_createPerson",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Person"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/Person"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "328452cf-6856-4f2b-acf2-cafeec6dfb01",
+          "in" : "body",
+          "name" : "Person",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.Person",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "person"
+        } ],
+        "tags" : [ "PersonController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Person",
+      "x-WM-TAG" : "PersonController",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_PersonController_findPersons",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.PersonController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "list",
+        "description" : "Returns the paginated list of Person instances matching the optional query (q) request param. If there is no query provided, it returns all the instances. Pagination & Sorting parameters such as page& size, sort can be sent as request parameters. The sort value should be a comma separated list of field names & optional sort order to sort the data on. eg: field1 asc, field2 desc etc ",
+        "operationId" : "LoanCorpAPI_PersonController_findPersons",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/Person"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "0acac280-bcfd-45f2-b21a-c8a6544757be",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "PersonController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Person"
+    },
+    "/loancorp/Loan/{id}/loanEmis" : {
+      "x-WM-BASE_PATH" : "/loancorp/Loan",
+      "x-WM-TAG" : "LoanController",
+      "x-WM-RELATIVE_PATH" : "/{id}/loanEmis",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanController_findAssociatedLoanEmis",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Gets the loanEmis instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanController_findAssociatedLoanEmis",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/LoanEmi"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "740faeb3-8e56-4a4d-a5e4-3e1f6032f1b6",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Loan/{id}/loanEmis"
+    },
+    "/loancorp/Role" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_RoleController_createRole",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.RoleController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "create",
+        "description" : "Creates a new Role instance.",
+        "operationId" : "LoanCorpAPI_RoleController_createRole",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Role"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/Role"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "803afc32-8961-48bb-b937-4f8cc6e600c1",
+          "in" : "body",
+          "name" : "Role",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.Role",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "role"
+        } ],
+        "tags" : [ "RoleController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Role",
+      "x-WM-TAG" : "RoleController",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_RoleController_findRoles",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.RoleController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "list",
+        "description" : "Returns the paginated list of Role instances matching the optional query (q) request param. If there is no query provided, it returns all the instances. Pagination & Sorting parameters such as page& size, sort can be sent as request parameters. The sort value should be a comma separated list of field names & optional sort order to sort the data on. eg: field1 asc, field2 desc etc ",
+        "operationId" : "LoanCorpAPI_RoleController_findRoles",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/Role"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "a81df9f7-be4a-488f-bf4b-41aa21617937",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "RoleController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Role"
+    },
+    "/loancorp/Person/count" : {
+      "x-WM-BASE_PATH" : "/loancorp/Person",
+      "x-WM-TAG" : "PersonController",
+      "x-WM-RELATIVE_PATH" : "/count",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_PersonController_countPersons",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.PersonController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the total count of Person instances matching the optional query (q) request param.",
+        "operationId" : "LoanCorpAPI_PersonController_countPersons",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "format" : "int64",
+              "type" : "integer"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "62894f99-70d6-4ac7-a582-d43f8e1c74ca",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        } ],
+        "tags" : [ "PersonController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Person/count"
+    },
+    "/loancorp/LoanStatus/{id}/loans" : {
+      "x-WM-BASE_PATH" : "/loancorp/LoanStatus",
+      "x-WM-TAG" : "LoanStatusController",
+      "x-WM-RELATIVE_PATH" : "/{id}/loans",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanStatusController_findAssociatedLoans",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanStatusController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Gets the loans instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanStatusController_findAssociatedLoans",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/Loan"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "db27b920-8151-4218-bbf7-e021f33b1749",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanStatusController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanStatus/{id}/loans"
+    },
+    "/loancorp/Person/{email}/loans" : {
+      "x-WM-BASE_PATH" : "/loancorp/Person",
+      "x-WM-TAG" : "PersonController",
+      "x-WM-RELATIVE_PATH" : "/{email}/loans",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_PersonController_findAssociatedLoans",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.PersonController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Gets the loans instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_PersonController_findAssociatedLoans",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/Loan"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "38035078-d6b6-496d-93e8-e8e356ffe433",
+          "in" : "path",
+          "name" : "email",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "email"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "PersonController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Person/{email}/loans"
+    },
+    "/loancorp/LoanEmi/search" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanEmiController_searchLoanEmisByQueryFilters",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanEmiController",
+        "deprecated" : true,
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the list of LoanEmi instances matching the search criteria.",
+        "operationId" : "LoanCorpAPI_LoanEmiController_searchLoanEmisByQueryFilters",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/LoanEmi"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        }, {
+          "schema" : {
+            "x-WM-IS_LIST" : false,
+            "type" : "array",
+            "items" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/QueryFilter"
+            }
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "70ce443c-2813-493c-b65e-09804f6547fa",
+          "in" : "body",
+          "name" : "QueryFilter",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "queryFilters"
+        } ],
+        "tags" : [ "LoanEmiController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanEmi",
+      "x-WM-TAG" : "LoanEmiController",
+      "x-WM-RELATIVE_PATH" : "/search",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanEmi/search"
+    },
+    "/loancorp/Loan/{id}" : {
+      "patch" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanController_patchLoan",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Partially updates the Loan instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanController_patchLoan",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Loan"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "03ef35fb-5f70-498e-9d91-952bf7163ac9",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/Loan"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "76c794b5-6f9b-48c5-8333-a1dbc34f0149",
+          "in" : "body",
+          "name" : "Loan",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.Loan",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "loanPatch"
+        } ],
+        "tags" : [ "LoanController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Loan",
+      "x-WM-TAG" : "LoanController",
+      "x-WM-RELATIVE_PATH" : "/{id}",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanController_getLoan",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the Loan instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanController_getLoan",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Loan"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "f2ba8ae2-c256-4096-9561-62fa09a28412",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        } ],
+        "tags" : [ "LoanController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Loan/{id}",
+      "delete" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanController_deleteLoan",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "delete",
+        "description" : "Deletes the Loan instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanController_deleteLoan",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "type" : "boolean"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "af6e18d4-35cb-459c-8519-4373298fa3be",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        } ],
+        "tags" : [ "LoanController" ]
+      },
+      "put" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanController_editLoan",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "update",
+        "description" : "Updates the Loan instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanController_editLoan",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Loan"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "736b0163-8b95-4482-b318-4e4d227a5813",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/Loan"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "25bc262c-f386-4742-b344-279ff7d31aec",
+          "in" : "body",
+          "name" : "Loan",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.Loan",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "loan"
+        } ],
+        "tags" : [ "LoanController" ]
+      }
+    },
+    "/loancorp/LoanType" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanTypeController_createLoanType",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanTypeController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "create",
+        "description" : "Creates a new LoanType instance.",
+        "operationId" : "LoanCorpAPI_LoanTypeController_createLoanType",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanType"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/LoanType"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "fa910639-d83a-48b1-814e-46d2da72e11f",
+          "in" : "body",
+          "name" : "LoanType",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.LoanType",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "loanType"
+        } ],
+        "tags" : [ "LoanTypeController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanType",
+      "x-WM-TAG" : "LoanTypeController",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanTypeController_findLoanTypes",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanTypeController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "list",
+        "description" : "Returns the paginated list of LoanType instances matching the optional query (q) request param. If there is no query provided, it returns all the instances. Pagination & Sorting parameters such as page& size, sort can be sent as request parameters. The sort value should be a comma separated list of field names & optional sort order to sort the data on. eg: field1 asc, field2 desc etc ",
+        "operationId" : "LoanCorpAPI_LoanTypeController_findLoanTypes",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/LoanType"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "15495739-ee00-469f-a40c-fb24cdb5f20c",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanTypeController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanType"
+    },
+    "/loancorp/Role/search" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_RoleController_searchRolesByQueryFilters",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.RoleController",
+        "deprecated" : true,
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the list of Role instances matching the search criteria.",
+        "operationId" : "LoanCorpAPI_RoleController_searchRolesByQueryFilters",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/Role"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        }, {
+          "schema" : {
+            "x-WM-IS_LIST" : false,
+            "type" : "array",
+            "items" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/QueryFilter"
+            }
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "bed5e2d1-5a0e-4ed0-a513-448a9c6516b5",
+          "in" : "body",
+          "name" : "QueryFilter",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "queryFilters"
+        } ],
+        "tags" : [ "RoleController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Role",
+      "x-WM-TAG" : "RoleController",
+      "x-WM-RELATIVE_PATH" : "/search",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Role/search"
+    },
+    "/loancorp/LoanType/export/{exportType}" : {
+      "x-WM-BASE_PATH" : "/loancorp/LoanType",
+      "x-WM-TAG" : "LoanTypeController",
+      "x-WM-RELATIVE_PATH" : "/export/{exportType}",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanTypeController_exportLoanTypes",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanTypeController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/octet-stream" ],
+        "description" : "Returns downloadable file for the data matching the optional query (q) request param.",
+        "operationId" : "LoanCorpAPI_LoanTypeController_exportLoanTypes",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Downloadable"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "e7d09ea9-e9d0-4f90-98ba-0b796b101578",
+          "in" : "path",
+          "name" : "exportType",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.export.ExportType",
+          "required" : true,
+          "enum" : [ "EXCEL", "CSV" ],
+          "x-WM-ORIGINAL-NAME" : "exportType"
+        }, {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "ed082fc7-45f1-4879-8453-130c067b054d",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanTypeController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanType/export/{exportType}"
+    },
+    "/loancorp/LoanEmi/{id}" : {
+      "patch" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanEmiController_patchLoanEmi",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanEmiController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Partially updates the LoanEmi instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanEmiController_patchLoanEmi",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanEmi"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "e8b130cc-9760-4db4-98f0-1e17b37a3f71",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/LoanEmi"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "8b1a8520-5dfc-4e7a-8bd9-878fcbc570b4",
+          "in" : "body",
+          "name" : "LoanEmi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.LoanEmi",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "loanEmiPatch"
+        } ],
+        "tags" : [ "LoanEmiController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanEmi",
+      "x-WM-TAG" : "LoanEmiController",
+      "x-WM-RELATIVE_PATH" : "/{id}",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanEmiController_getLoanEmi",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanEmiController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the LoanEmi instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanEmiController_getLoanEmi",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanEmi"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "6f562810-384c-494d-a4e2-b00b509707b8",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        } ],
+        "tags" : [ "LoanEmiController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanEmi/{id}",
+      "delete" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanEmiController_deleteLoanEmi",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanEmiController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "delete",
+        "description" : "Deletes the LoanEmi instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanEmiController_deleteLoanEmi",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "type" : "boolean"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "2b1d33f7-607f-47c4-85cb-7cc7cad17643",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        } ],
+        "tags" : [ "LoanEmiController" ]
+      },
+      "put" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanEmiController_editLoanEmi",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanEmiController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "update",
+        "description" : "Updates the LoanEmi instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanEmiController_editLoanEmi",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanEmi"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "824ce693-a542-432e-a153-7a40419bc02a",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/LoanEmi"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "c40dc62c-f62e-4b44-a5c0-8b2c6fd0c766",
+          "in" : "body",
+          "name" : "LoanEmi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.LoanEmi",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "loanEmi"
+        } ],
+        "tags" : [ "LoanEmiController" ]
+      }
+    },
+    "/loancorp/Person/filter" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_PersonController_filterPersons",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.PersonController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the paginated list of Person instances matching the optional query (q) request param. This API should be used only if the query string is too big to fit in GET request with request param. The request has to made in application/x-www-form-urlencoded format.",
+        "operationId" : "LoanCorpAPI_PersonController_filterPersons",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/Person"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "c8de4eaf-e9a6-4ff4-9af6-93a9127cc1e9",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "PersonController" ],
+        "consumes" : [ "application/x-www-form-urlencoded" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Person",
+      "x-WM-TAG" : "PersonController",
+      "x-WM-RELATIVE_PATH" : "/filter",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Person/filter"
+    },
+    "/loancorp/LoanType/aggregations" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanTypeController_getLoanTypeAggregatedValues",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanTypeController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns aggregated result with given aggregation info",
+        "operationId" : "LoanCorpAPI_LoanTypeController_getLoanTypeAggregatedValues",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "additionalProperties" : {
+                  "x-WM-TYPE_ARGUMENTS" : [ ],
+                  "$ref" : "#/definitions/Object"
+                },
+                "type" : "object"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/AggregationInfo"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "44b9d049-f3d8-4be9-9eda-ba6b5a72e78c",
+          "in" : "body",
+          "name" : "AggregationInfo",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.AggregationInfo",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "aggregationInfo"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanTypeController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanType",
+      "x-WM-TAG" : "LoanTypeController",
+      "x-WM-RELATIVE_PATH" : "/aggregations",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanType/aggregations"
+    },
+    "/manageLoan/loan" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_ManageLoanController_createLoan",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.ManageLoanController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "create",
+        "operationId" : "LoanCorpAPI_ManageLoanController_createLoan",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Loan"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/LoanDTO"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "e91eff1a-2c86-4c1f-b0b5-b65d6ab7f289",
+          "in" : "body",
+          "name" : "LoanDTO",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.manageloanservice.model.LoanDTO",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "loanDTO"
+        } ],
+        "tags" : [ "ManageLoanController" ]
+      },
+      "x-WM-BASE_PATH" : "/manageLoan",
+      "x-WM-TAG" : "ManageLoanController",
+      "x-WM-RELATIVE_PATH" : "/loan",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/manageLoan/loan"
+    },
+    "/loancorp/Loan/{id}/loanDocs" : {
+      "x-WM-BASE_PATH" : "/loancorp/Loan",
+      "x-WM-TAG" : "LoanController",
+      "x-WM-RELATIVE_PATH" : "/{id}/loanDocs",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanController_findAssociatedLoanDocs",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Gets the loanDocs instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanController_findAssociatedLoanDocs",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/LoanDoc"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "21a837e3-d2b2-4074-b712-e6065349b06f",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Loan/{id}/loanDocs"
+    },
+    "/loancorp/LoanStatus/export" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanStatusController_exportLoanStatusesAndGetURL",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanStatusController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns a URL to download a file for the data matching the optional query (q) request param and the required fields provided in the Export Options.",
+        "operationId" : "LoanCorpAPI_LoanStatusController_exportLoanStatusesAndGetURL",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/StringWrapper"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/DataExportOptions"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "8381061b-c143-412c-a2f2-3fe7bebd4b79",
+          "in" : "body",
+          "name" : "DataExportOptions",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.export.DataExportOptions",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "exportOptions"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanStatusController" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanStatus",
+      "x-WM-TAG" : "LoanStatusController",
+      "x-WM-RELATIVE_PATH" : "/export",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanStatus/export"
+    },
+    "/loancorp/Loan/aggregations" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanController_getLoanAggregatedValues",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns aggregated result with given aggregation info",
+        "operationId" : "LoanCorpAPI_LoanController_getLoanAggregatedValues",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "additionalProperties" : {
+                  "x-WM-TYPE_ARGUMENTS" : [ ],
+                  "$ref" : "#/definitions/Object"
+                },
+                "type" : "object"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/AggregationInfo"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "ecb39b98-e17e-493f-9bfd-94a61cb84ca6",
+          "in" : "body",
+          "name" : "AggregationInfo",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.AggregationInfo",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "aggregationInfo"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Loan",
+      "x-WM-TAG" : "LoanController",
+      "x-WM-RELATIVE_PATH" : "/aggregations",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Loan/aggregations"
+    },
+    "/loancorp/LoanType/count" : {
+      "x-WM-BASE_PATH" : "/loancorp/LoanType",
+      "x-WM-TAG" : "LoanTypeController",
+      "x-WM-RELATIVE_PATH" : "/count",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanTypeController_countLoanTypes",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanTypeController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the total count of LoanType instances matching the optional query (q) request param.",
+        "operationId" : "LoanCorpAPI_LoanTypeController_countLoanTypes",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "format" : "int64",
+              "type" : "integer"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "010fded4-d410-4676-83f1-1d0aa7118844",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        } ],
+        "tags" : [ "LoanTypeController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanType/count"
+    },
+    "/loancorp/LoanDoc/search" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanDocController_searchLoanDocsByQueryFilters",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanDocController",
+        "deprecated" : true,
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the list of LoanDoc instances matching the search criteria.",
+        "operationId" : "LoanCorpAPI_LoanDocController_searchLoanDocsByQueryFilters",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/LoanDoc"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        }, {
+          "schema" : {
+            "x-WM-IS_LIST" : false,
+            "type" : "array",
+            "items" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/QueryFilter"
+            }
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "e74e92bf-e3f1-4f10-91bc-572fa534a247",
+          "in" : "body",
+          "name" : "QueryFilter",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "queryFilters"
+        } ],
+        "tags" : [ "LoanDocController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanDoc",
+      "x-WM-TAG" : "LoanDocController",
+      "x-WM-RELATIVE_PATH" : "/search",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanDoc/search"
+    },
+    "/loancorp/LoanStatus" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanStatusController_createLoanStatus",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanStatusController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "create",
+        "description" : "Creates a new LoanStatus instance.",
+        "operationId" : "LoanCorpAPI_LoanStatusController_createLoanStatus",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanStatus"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/LoanStatus"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "2a79b40f-c777-4d75-973e-315716f24f77",
+          "in" : "body",
+          "name" : "LoanStatus",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.LoanStatus",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "loanStatus"
+        } ],
+        "tags" : [ "LoanStatusController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanStatus",
+      "x-WM-TAG" : "LoanStatusController",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanStatusController_findLoanStatuses",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanStatusController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "list",
+        "description" : "Returns the paginated list of LoanStatus instances matching the optional query (q) request param. If there is no query provided, it returns all the instances. Pagination & Sorting parameters such as page& size, sort can be sent as request parameters. The sort value should be a comma separated list of field names & optional sort order to sort the data on. eg: field1 asc, field2 desc etc ",
+        "operationId" : "LoanCorpAPI_LoanStatusController_findLoanStatuses",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/LoanStatus"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "8455c2be-d6b9-401b-9cd7-e3de00572601",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanStatusController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanStatus"
+    },
+    "/loancorp/LoanType/{id}/loans" : {
+      "x-WM-BASE_PATH" : "/loancorp/LoanType",
+      "x-WM-TAG" : "LoanTypeController",
+      "x-WM-RELATIVE_PATH" : "/{id}/loans",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanTypeController_findAssociatedLoans",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanTypeController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Gets the loans instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanTypeController_findAssociatedLoans",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/Loan"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "6bc26aae-bf59-4aba-a361-538490a3076e",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanTypeController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanType/{id}/loans"
+    },
+    "/loancorp/Role/export/{exportType}" : {
+      "x-WM-BASE_PATH" : "/loancorp/Role",
+      "x-WM-TAG" : "RoleController",
+      "x-WM-RELATIVE_PATH" : "/export/{exportType}",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_RoleController_exportRoles",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.RoleController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/octet-stream" ],
+        "description" : "Returns downloadable file for the data matching the optional query (q) request param.",
+        "operationId" : "LoanCorpAPI_RoleController_exportRoles",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Downloadable"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "79666961-96bf-49f2-8b58-6ca1b7c5b8fe",
+          "in" : "path",
+          "name" : "exportType",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.export.ExportType",
+          "required" : true,
+          "enum" : [ "EXCEL", "CSV" ],
+          "x-WM-ORIGINAL-NAME" : "exportType"
+        }, {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "d1cc2bea-cc58-4a1a-a1d8-a066cdd13fdd",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "RoleController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Role/export/{exportType}"
+    },
+    "/loancorp/LoanDoc/{id}" : {
+      "patch" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanDocController_patchLoanDoc",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanDocController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Partially updates the LoanDoc instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanDocController_patchLoanDoc",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanDoc"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "5803baa7-4b04-40b3-9ced-3f3b87361b89",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/LoanDoc"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "aec99a85-34d5-42bc-a4b3-9b7ec2aa33a1",
+          "in" : "body",
+          "name" : "LoanDoc",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.LoanDoc",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "loanDocPatch"
+        } ],
+        "tags" : [ "LoanDocController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanDoc",
+      "x-WM-TAG" : "LoanDocController",
+      "x-WM-RELATIVE_PATH" : "/{id}",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanDocController_getLoanDoc",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanDocController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the LoanDoc instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanDocController_getLoanDoc",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanDoc"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "bd8306b0-2ae2-452e-8e07-1c5ea70fe442",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        } ],
+        "tags" : [ "LoanDocController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanDoc/{id}",
+      "delete" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanDocController_deleteLoanDoc",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanDocController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "delete",
+        "description" : "Deletes the LoanDoc instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanDocController_deleteLoanDoc",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "type" : "boolean"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "e1cbea97-e444-4855-bf78-2792778e1487",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        } ],
+        "tags" : [ "LoanDocController" ]
+      },
+      "put" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanDocController_editLoanDoc",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanDocController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "update",
+        "description" : "Updates the LoanDoc instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_LoanDocController_editLoanDoc",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanDoc"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "060b8816-ab40-484c-9cb2-17f840b91e6a",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/LoanDoc"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "27a7f2c5-71c0-4e78-8a57-c6846cbb2d32",
+          "in" : "body",
+          "name" : "LoanDoc",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.LoanDoc",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "loanDoc"
+        } ],
+        "tags" : [ "LoanDocController" ]
+      }
+    },
+    "/loancorp/LoanEmi/filter" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanEmiController_filterLoanEmis",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanEmiController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the paginated list of LoanEmi instances matching the optional query (q) request param. This API should be used only if the query string is too big to fit in GET request with request param. The request has to made in application/x-www-form-urlencoded format.",
+        "operationId" : "LoanCorpAPI_LoanEmiController_filterLoanEmis",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/LoanEmi"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "9a4aa17a-56e4-4cc4-a0a0-32841063bf19",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanEmiController" ],
+        "consumes" : [ "application/x-www-form-urlencoded" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanEmi",
+      "x-WM-TAG" : "LoanEmiController",
+      "x-WM-RELATIVE_PATH" : "/filter",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanEmi/filter"
+    },
+    "/loancorp/LoanEmi/export/{exportType}" : {
+      "x-WM-BASE_PATH" : "/loancorp/LoanEmi",
+      "x-WM-TAG" : "LoanEmiController",
+      "x-WM-RELATIVE_PATH" : "/export/{exportType}",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanEmiController_exportLoanEmis",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanEmiController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/octet-stream" ],
+        "description" : "Returns downloadable file for the data matching the optional query (q) request param.",
+        "operationId" : "LoanCorpAPI_LoanEmiController_exportLoanEmis",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Downloadable"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "6bbcc33e-4650-4f13-ae1f-1f94f38933e0",
+          "in" : "path",
+          "name" : "exportType",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.export.ExportType",
+          "required" : true,
+          "enum" : [ "EXCEL", "CSV" ],
+          "x-WM-ORIGINAL-NAME" : "exportType"
+        }, {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "8fb938d8-8847-4515-9ad6-30c55cccb931",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanEmiController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanEmi/export/{exportType}"
+    },
+    "/loancorp/Loan/export" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanController_exportLoansAndGetURL",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns a URL to download a file for the data matching the optional query (q) request param and the required fields provided in the Export Options.",
+        "operationId" : "LoanCorpAPI_LoanController_exportLoansAndGetURL",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/StringWrapper"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/DataExportOptions"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "9bc8fecc-0efd-41f9-8221-0149fe3ee207",
+          "in" : "body",
+          "name" : "DataExportOptions",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.export.DataExportOptions",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "exportOptions"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanController" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Loan",
+      "x-WM-TAG" : "LoanController",
+      "x-WM-RELATIVE_PATH" : "/export",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Loan/export"
+    },
+    "/loancorp/LoanStatus/export/{exportType}" : {
+      "x-WM-BASE_PATH" : "/loancorp/LoanStatus",
+      "x-WM-TAG" : "LoanStatusController",
+      "x-WM-RELATIVE_PATH" : "/export/{exportType}",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanStatusController_exportLoanStatuses",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanStatusController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/octet-stream" ],
+        "description" : "Returns downloadable file for the data matching the optional query (q) request param.",
+        "operationId" : "LoanCorpAPI_LoanStatusController_exportLoanStatuses",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Downloadable"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "382a4b91-9e44-4eb2-b911-dc97749d129d",
+          "in" : "path",
+          "name" : "exportType",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.export.ExportType",
+          "required" : true,
+          "enum" : [ "EXCEL", "CSV" ],
+          "x-WM-ORIGINAL-NAME" : "exportType"
+        }, {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "c54427bf-cd8b-43dd-bccd-905e781ceb13",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanStatusController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanStatus/export/{exportType}"
+    },
+    "/manageLoan/loanSummary" : {
+      "x-WM-BASE_PATH" : "/manageLoan",
+      "x-WM-TAG" : "ManageLoanController",
+      "x-WM-RELATIVE_PATH" : "/loanSummary",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_ManageLoanController_getLoanSummary",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.ManageLoanController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "operationId" : "LoanCorpAPI_ManageLoanController_getLoanSummary",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/LoanSummaryDTO"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "70309d91-7f87-4804-984f-a266d6f2de03",
+          "in" : "query",
+          "name" : "userEmail",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "userEmail"
+        } ],
+        "tags" : [ "ManageLoanController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/manageLoan/loanSummary"
+    },
+    "/loancorp/Loan/count" : {
+      "x-WM-BASE_PATH" : "/loancorp/Loan",
+      "x-WM-TAG" : "LoanController",
+      "x-WM-RELATIVE_PATH" : "/count",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanController_countLoans",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the total count of Loan instances matching the optional query (q) request param.",
+        "operationId" : "LoanCorpAPI_LoanController_countLoans",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "format" : "int64",
+              "type" : "integer"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "f3a05e9b-b94c-4d52-82d4-c33cff33fd36",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        } ],
+        "tags" : [ "LoanController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Loan/count"
+    },
+    "/loancorp/Role/{id}" : {
+      "patch" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_RoleController_patchRole",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.RoleController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Partially updates the Role instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_RoleController_patchRole",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Role"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "b212bbb1-668a-472b-9f2f-622fa9afe376",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/Role"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "77d21e81-0663-4c41-99c7-01b07c38fbdc",
+          "in" : "body",
+          "name" : "Role",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.Role",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "rolePatch"
+        } ],
+        "tags" : [ "RoleController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Role",
+      "x-WM-TAG" : "RoleController",
+      "x-WM-RELATIVE_PATH" : "/{id}",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_RoleController_getRole",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.RoleController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the Role instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_RoleController_getRole",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Role"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "a8cd09c0-ef57-4f00-a774-417d1db9a64d",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        } ],
+        "tags" : [ "RoleController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Role/{id}",
+      "delete" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_RoleController_deleteRole",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.RoleController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "delete",
+        "description" : "Deletes the Role instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_RoleController_deleteRole",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "type" : "boolean"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "af1a52f6-4e92-4cc2-a37f-ac613a212d0d",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        } ],
+        "tags" : [ "RoleController" ]
+      },
+      "put" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_RoleController_editRole",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.RoleController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-OPERATION_TYPE" : "update",
+        "description" : "Updates the Role instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_RoleController_editRole",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Role"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "b04fa0d3-f52c-4707-bbfc-753b806ea317",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/Role"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "63ff13a9-ce48-44cf-9471-747bec0bfc0d",
+          "in" : "body",
+          "name" : "Role",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.loancorpservices.Role",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "role"
+        } ],
+        "tags" : [ "RoleController" ]
+      }
+    },
+    "/loancorp/Role/{id}/persons" : {
+      "x-WM-BASE_PATH" : "/loancorp/Role",
+      "x-WM-TAG" : "RoleController",
+      "x-WM-RELATIVE_PATH" : "/{id}/persons",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_RoleController_findAssociatedPersons",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.RoleController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Gets the persons instance associated with the given id.",
+        "operationId" : "LoanCorpAPI_RoleController_findAssociatedPersons",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/Person"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "40ff4d73-c5d1-4148-a78b-74ca261efd70",
+          "in" : "path",
+          "name" : "id",
+          "format" : "int64",
+          "type" : "integer",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Long",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "id"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "RoleController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Role/{id}/persons"
+    },
+    "/loancorp/LoanStatus/aggregations" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanStatusController_getLoanStatusAggregatedValues",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanStatusController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns aggregated result with given aggregation info",
+        "operationId" : "LoanCorpAPI_LoanStatusController_getLoanStatusAggregatedValues",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "additionalProperties" : {
+                  "x-WM-TYPE_ARGUMENTS" : [ ],
+                  "$ref" : "#/definitions/Object"
+                },
+                "type" : "object"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/AggregationInfo"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "af7b6653-2f75-4b14-b159-489ac6a66bd0",
+          "in" : "body",
+          "name" : "AggregationInfo",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.AggregationInfo",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "aggregationInfo"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanStatusController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanStatus",
+      "x-WM-TAG" : "LoanStatusController",
+      "x-WM-RELATIVE_PATH" : "/aggregations",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanStatus/aggregations"
+    },
+    "/loancorp/LoanStatus/search" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanStatusController_searchLoanStatusesByQueryFilters",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanStatusController",
+        "deprecated" : true,
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the list of LoanStatus instances matching the search criteria.",
+        "operationId" : "LoanCorpAPI_LoanStatusController_searchLoanStatusesByQueryFilters",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/LoanStatus"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        }, {
+          "schema" : {
+            "x-WM-IS_LIST" : false,
+            "type" : "array",
+            "items" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/QueryFilter"
+            }
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "d83fe19b-0521-42e4-9949-c039539e20e2",
+          "in" : "body",
+          "name" : "QueryFilter",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "queryFilters"
+        } ],
+        "tags" : [ "LoanStatusController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanStatus",
+      "x-WM-TAG" : "LoanStatusController",
+      "x-WM-RELATIVE_PATH" : "/search",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanStatus/search"
+    },
+    "/loancorp/LoanType/filter" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanTypeController_filterLoanTypes",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanTypeController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the paginated list of LoanType instances matching the optional query (q) request param. This API should be used only if the query string is too big to fit in GET request with request param. The request has to made in application/x-www-form-urlencoded format.",
+        "operationId" : "LoanCorpAPI_LoanTypeController_filterLoanTypes",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/LoanType"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "cf258908-62ea-4cfc-9775-b3ab1e75580a",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanTypeController" ],
+        "consumes" : [ "application/x-www-form-urlencoded" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanType",
+      "x-WM-TAG" : "LoanTypeController",
+      "x-WM-RELATIVE_PATH" : "/filter",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanType/filter"
+    },
+    "/loancorp/Loan/filter" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanController_filterLoans",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the paginated list of Loan instances matching the optional query (q) request param. This API should be used only if the query string is too big to fit in GET request with request param. The request has to made in application/x-www-form-urlencoded format.",
+        "operationId" : "LoanCorpAPI_LoanController_filterLoans",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "x-WM-TYPE_ARGUMENTS" : [ ],
+                "$ref" : "#/definitions/Loan"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "b0c62c4f-754a-492f-8914-33896d5da65c",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanController" ],
+        "consumes" : [ "application/x-www-form-urlencoded" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Loan",
+      "x-WM-TAG" : "LoanController",
+      "x-WM-RELATIVE_PATH" : "/filter",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Loan/filter"
+    },
+    "/loancorp/Role/aggregations" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_RoleController_getRoleAggregatedValues",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.RoleController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns aggregated result with given aggregation info",
+        "operationId" : "LoanCorpAPI_RoleController_getRoleAggregatedValues",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ {
+                "additionalProperties" : {
+                  "x-WM-TYPE_ARGUMENTS" : [ ],
+                  "$ref" : "#/definitions/Object"
+                },
+                "type" : "object"
+              } ],
+              "$ref" : "#/definitions/Page"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/AggregationInfo"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "a138fc40-b670-4f3c-b1b9-b2d80e35fcd8",
+          "in" : "body",
+          "name" : "AggregationInfo",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.model.AggregationInfo",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "aggregationInfo"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "RoleController" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Role",
+      "x-WM-TAG" : "RoleController",
+      "x-WM-RELATIVE_PATH" : "/aggregations",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Role/aggregations"
+    },
+    "/loancorp/LoanEmi/export" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanEmiController_exportLoanEmisAndGetURL",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanEmiController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns a URL to download a file for the data matching the optional query (q) request param and the required fields provided in the Export Options.",
+        "operationId" : "LoanCorpAPI_LoanEmiController_exportLoanEmisAndGetURL",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/StringWrapper"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/DataExportOptions"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "fedd11b9-5241-4824-a037-217292a248c0",
+          "in" : "body",
+          "name" : "DataExportOptions",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.export.DataExportOptions",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "exportOptions"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanEmiController" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/LoanEmi",
+      "x-WM-TAG" : "LoanEmiController",
+      "x-WM-RELATIVE_PATH" : "/export",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanEmi/export"
+    },
+    "/loancorp/Person/export/{exportType}" : {
+      "x-WM-BASE_PATH" : "/loancorp/Person",
+      "x-WM-TAG" : "PersonController",
+      "x-WM-RELATIVE_PATH" : "/export/{exportType}",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_PersonController_exportPersons",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.PersonController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/octet-stream" ],
+        "description" : "Returns downloadable file for the data matching the optional query (q) request param.",
+        "operationId" : "LoanCorpAPI_PersonController_exportPersons",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Downloadable"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "d0d3eb3b-93fa-4c05-9037-51d90b3ffa4e",
+          "in" : "path",
+          "name" : "exportType",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.export.ExportType",
+          "required" : true,
+          "enum" : [ "EXCEL", "CSV" ],
+          "x-WM-ORIGINAL-NAME" : "exportType"
+        }, {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "0bdac683-dcec-4007-97e8-1854d74e55d5",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "PersonController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Person/export/{exportType}"
+    },
+    "/loancorp/Loan/export/{exportType}" : {
+      "x-WM-BASE_PATH" : "/loancorp/Loan",
+      "x-WM-TAG" : "LoanController",
+      "x-WM-RELATIVE_PATH" : "/export/{exportType}",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanController_exportLoans",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/octet-stream" ],
+        "description" : "Returns downloadable file for the data matching the optional query (q) request param.",
+        "operationId" : "LoanCorpAPI_LoanController_exportLoans",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/Downloadable"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "70ad4901-55d3-46e3-a51a-92f39ee3fae1",
+          "in" : "path",
+          "name" : "exportType",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.export.ExportType",
+          "required" : true,
+          "enum" : [ "EXCEL", "CSV" ],
+          "x-WM-ORIGINAL-NAME" : "exportType"
+        }, {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "a2852dcd-2440-455f-9df6-1d2dc324d688",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "LoanController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Loan/export/{exportType}"
+    },
+    "/loancorp/LoanDoc/count" : {
+      "x-WM-BASE_PATH" : "/loancorp/LoanDoc",
+      "x-WM-TAG" : "LoanDocController",
+      "x-WM-RELATIVE_PATH" : "/count",
+      "get" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_LoanDocController_countLoanDocs",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.LoanDocController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns the total count of LoanDoc instances matching the optional query (q) request param.",
+        "operationId" : "LoanCorpAPI_LoanDocController_countLoanDocs",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "format" : "int64",
+              "type" : "integer"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "6d798ed1-9381-4af3-b697-bf948a95a367",
+          "in" : "query",
+          "name" : "q",
+          "description" : "conditions to filter the results",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-ORIGINAL-NAME" : "query"
+        } ],
+        "tags" : [ "LoanDocController" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/LoanDoc/count"
+    },
+    "/loancorp/Role/export" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "LoanCorpAPI_RoleController_exportRolesAndGetURL",
+        "x-WM-CRUD_OPERATION_ID" : "LoanCorpAPI.RoleController",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "description" : "Returns a URL to download a file for the data matching the optional query (q) request param and the required fields provided in the Export Options.",
+        "operationId" : "LoanCorpAPI_RoleController_exportRolesAndGetURL",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "x-WM-TYPE_ARGUMENTS" : [ ],
+              "$ref" : "#/definitions/StringWrapper"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/DataExportOptions"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-UUID" : "13c5fa48-9a37-4000-b1dd-9b0119cb354c",
+          "in" : "body",
+          "name" : "DataExportOptions",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "com.wavemaker.runtime.data.export.DataExportOptions",
+          "required" : true,
+          "x-WM-ORIGINAL-NAME" : "exportOptions"
+        }, {
+          "default" : 0,
+          "x-WM-RESOLVER" : "org.springframework.data.domain.Pageable",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "page",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "default" : 20,
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "size",
+          "format" : "int32",
+          "type" : "integer",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "sort",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "RoleController" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-BASE_PATH" : "/loancorp/Role",
+      "x-WM-TAG" : "RoleController",
+      "x-WM-RELATIVE_PATH" : "/export",
+      "x-WM-COMPLETE_PATH" : "${rest.LoanCorpAPI.scheme}://${rest.LoanCorpAPI.host}${rest.LoanCorpAPI.basepath}/loancorp/Role/export"
+    }
+  },
+  "host" : "${rest.LoanCorpAPI.host}",
+  "schemes" : [ "${rest.LoanCorpAPI.scheme}" ],
+  "definitions" : {
+    "LoanType" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.LoanType",
+      "x-WM-TAGS" : [ "LoanStatusController", "LoanTypeController" ],
+      "properties" : {
+        "displayName" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "id" : {
+          "format" : "int64",
+          "type" : "integer"
+        }
+      }
+    },
+    "LoanDoc" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.LoanDoc",
+      "x-WM-TAGS" : [ "LoanDocController", "LoanController" ],
+      "properties" : {
+        "docName" : {
+          "type" : "string"
+        },
+        "loan" : {
+          "x-WM-TYPE_ARGUMENTS" : [ ],
+          "$ref" : "#/definitions/Loan"
+        },
+        "id" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "loanId" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "docPath" : {
+          "type" : "string"
+        }
+      }
+    },
+    "LoanStatus" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.LoanStatus",
+      "x-WM-TAGS" : [ "LoanStatusController" ],
+      "properties" : {
+        "displayName" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "id" : {
+          "format" : "int64",
+          "type" : "integer"
+        }
+      }
+    },
+    "Page" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.Page",
+      "x-WM-TAGS" : [ "LoanStatusController", "LoanTypeController", "PersonController", "LoanDocController", "RoleController", "LoanController", "LoanEmiController" ],
+      "properties" : {
+        "number" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "size" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "last" : {
+          "type" : "boolean"
+        },
+        "numberOfElements" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "arg" : {
+          "x-WM-TYPE_ARGUMENTS" : [ ],
+          "$ref" : "#/definitions/Object"
+        },
+        "totalPages" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "pageable" : {
+          "x-WM-TYPE_ARGUMENTS" : [ ],
+          "$ref" : "#/definitions/Pageable"
+        },
+        "sort" : {
+          "x-WM-TYPE_ARGUMENTS" : [ ],
+          "$ref" : "#/definitions/Sort"
+        },
+        "first" : {
+          "type" : "boolean"
+        },
+        "content" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/Object"
+          }
+        },
+        "totalElements" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "empty" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "Aggregation" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.Aggregation",
+      "x-WM-TAGS" : [ "LoanStatusController" ],
+      "properties" : {
+        "field" : {
+          "type" : "string"
+        },
+        "alias" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string",
+          "enum" : [ "SUM", "MIN", "MAX", "AVG", "COUNT" ]
+        }
+      }
+    },
+    "Pageable" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.Pageable",
+      "x-WM-TAGS" : [ "LoanStatusController" ],
+      "properties" : {
+        "paged" : {
+          "type" : "boolean"
+        },
+        "pageNumber" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "offset" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "pageSize" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "unpaged" : {
+          "type" : "boolean"
+        },
+        "sort" : {
+          "x-WM-TYPE_ARGUMENTS" : [ ],
+          "$ref" : "#/definitions/Sort"
+        }
+      }
+    },
+    "ExportOptions" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.ExportOptions",
+      "x-WM-TAGS" : [ "LoanStatusController" ],
+      "properties" : {
+        "exportSize" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "fileName" : {
+          "type" : "string"
+        },
+        "exportType" : {
+          "type" : "string",
+          "enum" : [ "EXCEL", "CSV" ]
+        },
+        "fields" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/FieldInfo"
+          }
+        }
+      }
+    },
+    "Sort$Order" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.Sort$Order",
+      "x-WM-TAGS" : [ "LoanStatusController" ],
+      "properties" : {
+        "nullHandling" : {
+          "type" : "string",
+          "enum" : [ "NATIVE", "NULLS_FIRST", "NULLS_LAST" ]
+        },
+        "ignoreCase" : {
+          "type" : "boolean"
+        },
+        "property" : {
+          "type" : "string"
+        },
+        "direction" : {
+          "type" : "string",
+          "enum" : [ "ASC", "DESC" ]
+        }
+      }
+    },
+    "Sort" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.Sort",
+      "x-WM-TAGS" : [ "LoanStatusController" ],
+      "properties" : {
+        "orders" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/Sort$Order"
+          }
+        }
+      }
+    },
+    "Stream" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.Stream",
+      "x-WM-TAGS" : [ "LoanStatusController" ],
+      "properties" : {
+        "parallel" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "AggregationInfo" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.AggregationInfo",
+      "x-WM-TAGS" : [ "LoanStatusController", "LoanTypeController", "PersonController", "LoanDocController", "RoleController", "LoanController", "LoanEmiController" ],
+      "properties" : {
+        "filter" : {
+          "type" : "string"
+        },
+        "groupByFields" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "aggregations" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "x-WM-TYPE_ARGUMENTS" : [ ],
+            "$ref" : "#/definitions/Aggregation"
+          }
+        }
+      }
+    },
+    "LoanEmi" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.LoanEmi",
+      "x-WM-TAGS" : [ "LoanController", "LoanEmiController" ],
+      "properties" : {
+        "emiNumber" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "loan" : {
+          "x-WM-TYPE_ARGUMENTS" : [ ],
+          "$ref" : "#/definitions/Loan"
+        },
+        "emiAmount" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "dueDate" : {
+          "x-WM-SUB_FORMAT" : "date",
+          "format" : "date",
+          "type" : "string"
+        },
+        "id" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "loanId" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "status" : {
+          "type" : "string"
+        }
+      }
+    },
+    "StringWrapper" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/AbstractPrimitiveWrapper"
+      }, { } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.StringWrapper",
+      "x-WM-TAGS" : [ "LoanStatusController", "LoanTypeController", "PersonController", "LoanDocController", "RoleController", "LoanController", "LoanEmiController" ]
+    },
+    "LoanDTO" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.LoanDTO",
+      "x-WM-TAGS" : [ "ManageLoanController" ],
+      "properties" : {
+        "autoPayEnabled" : {
+          "type" : "boolean"
+        },
+        "person" : {
+          "x-WM-TYPE_ARGUMENTS" : [ ],
+          "$ref" : "#/definitions/PersonDTO"
+        },
+        "principleAmount" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "loanCategory" : {
+          "type" : "string"
+        },
+        "tenure" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "InputStream" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.InputStream",
+      "x-WM-TAGS" : [ "LoanStatusController" ]
+    },
+    "PersonDTO" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.PersonDTO",
+      "x-WM-TAGS" : [ "ManageLoanController" ],
+      "properties" : {
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "phoneNumber" : {
+          "type" : "string"
+        },
+        "address" : {
+          "type" : "string"
+        },
+        "socialSecurityNumber" : {
+          "type" : "string"
+        },
+        "dob" : {
+          "x-WM-SUB_FORMAT" : "date",
+          "format" : "date",
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        }
+      }
+    },
+    "MarkOverdueEmisRequest" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.MarkOverdueEmisRequest",
+      "x-WM-TAGS" : [ "QueryExecutionController" ]
+    },
+    "AbstractPrimitiveWrapper" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.AbstractPrimitiveWrapper",
+      "x-WM-TAGS" : [ "LoanStatusController", "QueryExecutionController" ],
+      "properties" : {
+        "result" : {
+          "x-WM-TYPE_ARGUMENTS" : [ ],
+          "$ref" : "#/definitions/Object"
+        }
+      }
+    },
+    "Downloadable" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.Downloadable",
+      "x-WM-TAGS" : [ "LoanStatusController", "LoanTypeController", "PersonController", "LoanDocController", "RoleController", "LoanController", "LoanEmiController" ],
+      "properties" : {
+        "fileName" : {
+          "type" : "string"
+        },
+        "inline" : {
+          "type" : "boolean"
+        },
+        "contents" : {
+          "x-WM-TYPE_ARGUMENTS" : [ ],
+          "$ref" : "#/definitions/InputStream"
+        },
+        "contentLength" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "contentType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Role" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.Role",
+      "x-WM-TAGS" : [ "LoanStatusController", "RoleController" ],
+      "properties" : {
+        "displayName" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "id" : {
+          "format" : "int64",
+          "type" : "integer"
+        }
+      }
+    },
+    "QueryFilter" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.QueryFilter",
+      "x-WM-TAGS" : [ "LoanStatusController", "LoanTypeController", "PersonController", "LoanDocController", "RoleController", "LoanController", "LoanEmiController" ],
+      "properties" : {
+        "attributeValue" : {
+          "x-WM-TYPE_ARGUMENTS" : [ ],
+          "$ref" : "#/definitions/Object"
+        },
+        "attributeType" : {
+          "type" : "string",
+          "enum" : [ "BIG_DECIMAL", "BIG_INTEGER", "BLOB", "BOOLEAN", "BYTE", "CALENDAR", "CALENDAR_DATE", "CHARACTER", "CLOB", "CURRENCY", "DATE", "DOUBLE", "FLOAT", "INTEGER", "LONG", "LOCALE", "STRING", "SHORT", "TEXT", "TIME", "DATETIME", "TIMESTAMP", "TIMEZONE", "TRUE_FALSE", "YES_NO" ]
+        },
+        "filterCondition" : {
+          "type" : "string",
+          "enum" : [ "STARTING_WITH", "ENDING_WITH", "CONTAINING", "EQUALS", "NOT_EQUALS", "BETWEEN", "LESS_THAN", "LESS_THAN_OR_EQUALS", "GREATER_THAN", "GREATER_THAN_OR_EQUALS", "NULL", "EMPTY", "LIKE", "IN", "NULL_OR_EMPTY", "IS" ]
+        },
+        "attributeName" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Loan" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.Loan",
+      "x-WM-TAGS" : [ "LoanStatusController", "LoanTypeController", "PersonController", "LoanDocController", "LoanController" ],
+      "properties" : {
+        "autoPayEnabled" : {
+          "type" : "boolean"
+        },
+        "loanType" : {
+          "x-WM-TYPE_ARGUMENTS" : [ ],
+          "$ref" : "#/definitions/LoanType"
+        },
+        "endDate" : {
+          "x-WM-SUB_FORMAT" : "date",
+          "format" : "date",
+          "type" : "string"
+        },
+        "totalAmount" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "emiAmount" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "balance" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "interest" : {
+          "format" : "float",
+          "type" : "number"
+        },
+        "person" : {
+          "x-WM-TYPE_ARGUMENTS" : [ ],
+          "$ref" : "#/definitions/Person"
+        },
+        "loanStatusId" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "personEmail" : {
+          "type" : "string"
+        },
+        "loanStatus" : {
+          "x-WM-TYPE_ARGUMENTS" : [ ],
+          "$ref" : "#/definitions/LoanStatus"
+        },
+        "id" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "applicationId" : {
+          "type" : "string"
+        },
+        "principleAmount" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "loanTypeId" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "tenure" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "startDate" : {
+          "x-WM-SUB_FORMAT" : "date",
+          "format" : "date",
+          "type" : "string"
+        }
+      }
+    },
+    "DataExportOptions" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/ExportOptions"
+      }, {
+        "properties" : {
+          "query" : {
+            "type" : "string"
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.DataExportOptions",
+      "x-WM-TAGS" : [ "LoanStatusController", "LoanTypeController", "PersonController", "LoanDocController", "RoleController", "LoanController", "LoanEmiController" ]
+    },
+    "LoanSummaryDTO" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.LoanSummaryDTO",
+      "x-WM-TAGS" : [ "ManageLoanController" ],
+      "properties" : {
+        "totalInstallments" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "totalPastInstallments" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "totalPaidInstallments" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "percentagePayOff" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "outstandingAmount" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "installmentAmount" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "upcomingInstallmentDate" : {
+          "x-WM-SUB_FORMAT" : "date",
+          "format" : "date",
+          "type" : "string"
+        },
+        "upcomingInstallmentLoanType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Object" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.Object",
+      "x-WM-TAGS" : [ "LoanStatusController", "LoanTypeController", "PersonController", "LoanDocController", "RoleController", "LoanController", "LoanEmiController" ]
+    },
+    "IntegerWrapper" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/AbstractPrimitiveWrapper"
+      }, { } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.IntegerWrapper",
+      "x-WM-TAGS" : [ "QueryExecutionController" ]
+    },
+    "Person" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.Person",
+      "x-WM-TAGS" : [ "LoanStatusController", "PersonController", "RoleController" ],
+      "properties" : {
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "phoneNumber" : {
+          "type" : "string"
+        },
+        "address" : {
+          "type" : "string"
+        },
+        "role" : {
+          "x-WM-TYPE_ARGUMENTS" : [ ],
+          "$ref" : "#/definitions/Role"
+        },
+        "roleId" : {
+          "format" : "int64",
+          "type" : "integer"
+        },
+        "socialSecurityNumber" : {
+          "type" : "string"
+        },
+        "dob" : {
+          "x-WM-SUB_FORMAT" : "date",
+          "format" : "date",
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        }
+      }
+    },
+    "FieldInfo" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.FieldInfo",
+      "x-WM-TAGS" : [ "LoanStatusController" ],
+      "properties" : {
+        "expression" : {
+          "type" : "string"
+        },
+        "field" : {
+          "type" : "string"
+        },
+        "header" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "description" : "Swagger API documentation for loancorp",
+    "x-WM-SERVICE_ID" : "LoanCorpAPI",
+    "title" : "LoanCorp Service Swagger Documentation",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "OpenAPIService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "tags" : [ {
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.LoanController",
+    "name" : "LoanController",
+    "description" : "Exposes APIs to work with Loan resource.",
+    "x-WM-VERSION" : "",
+    "x-WM-CONTROLLER_NAME" : "Loan"
+  }, {
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.LoanDocController",
+    "name" : "LoanDocController",
+    "description" : "Exposes APIs to work with LoanDoc resource.",
+    "x-WM-VERSION" : "",
+    "x-WM-CONTROLLER_NAME" : "LoanDoc"
+  }, {
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.LoanEmiController",
+    "name" : "LoanEmiController",
+    "description" : "Exposes APIs to work with LoanEmi resource.",
+    "x-WM-VERSION" : "",
+    "x-WM-CONTROLLER_NAME" : "LoanEmi"
+  }, {
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.LoanStatusController",
+    "name" : "LoanStatusController",
+    "description" : "Exposes APIs to work with LoanStatus resource.",
+    "x-WM-VERSION" : "",
+    "x-WM-CONTROLLER_NAME" : "LoanStatus"
+  }, {
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.LoanTypeController",
+    "name" : "LoanTypeController",
+    "description" : "Exposes APIs to work with LoanType resource.",
+    "x-WM-VERSION" : "",
+    "x-WM-CONTROLLER_NAME" : "LoanType"
+  }, {
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.ManageLoanController",
+    "name" : "ManageLoanController"
+  }, {
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.PersonController",
+    "name" : "PersonController",
+    "description" : "Exposes APIs to work with Person resource.",
+    "x-WM-VERSION" : "",
+    "x-WM-CONTROLLER_NAME" : "Person"
+  }, {
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.ProcedureExecutionController",
+    "name" : "ProcedureExecutionController",
+    "description" : "controller class for procedure execution",
+    "x-WM-VERSION" : "",
+    "x-WM-CONTROLLER_NAME" : "ProcedureExecution"
+  }, {
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.QueryExecutionController",
+    "name" : "QueryExecutionController",
+    "description" : "controller class for query execution",
+    "x-WM-VERSION" : "",
+    "x-WM-CONTROLLER_NAME" : "QueryExecution"
+  }, {
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.figmaapp.LoanCorpAPI.RoleController",
+    "name" : "RoleController",
+    "description" : "Exposes APIs to work with Role resource.",
+    "x-WM-VERSION" : "",
+    "x-WM-CONTROLLER_NAME" : "Role"
+  } ]
+}
