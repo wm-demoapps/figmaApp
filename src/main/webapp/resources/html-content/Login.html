@@ -1,0 +1,46 @@
+<wm-page name="loginPage">
+    <wm-content name="login">
+        <wm-page-content columnwidth="12" name="loginPageContent">
+            <wm-container direction="row" padding="0 0 0 0" alignment="top-left" height="fill" width="fill" gap="0" class="login" overflow="none" name="login">
+                <wm-container direction="column" padding="0 180px 0 180px" alignment="middle-center" height="920" width="886" gap="24" class="frame_2147227379" overflow="none" name="leftSection" backgroundimage="resources/images/imagelists/login/frame_2147227379.png" backgroundsize="cover" backgroundrepeat="no-repeat">
+                    <wm-container direction="row" padding="0 0 0 0" alignment="middle-left" height="hug" width="fill" gap="12" class="frame_2147227376" overflow="none" name="logoContainer">
+                        <wm-picture resizemode="cover" picturesource="resources/images/imagelists/login/image_16.png" width="42" height="42" name="logoIcon"></wm-picture>
+                        <wm-picture resizemode="cover" picturesource="resources/images/imagelists/login/image_15.png" width="133" height="10.5" name="brandLogo"></wm-picture>
+                    </wm-container>
+                    <wm-container direction="column" padding="0 0 0 0" alignment="top-left" height="hug" width="fill" gap="12" class="frame_2147227378" overflow="none" name="heroTextContainer">
+                        <wm-container direction="column" padding="0 0 0 0" alignment="top-left" height="hug" width="fill" gap="4" class="frame_2147227377" overflow="none" name="heroHeadingContainer">
+                            <wm-label padding="unset" caption="Simplifying smart financing" class="label-section-subtitle section_subtitle" variant="section-subtitle" name="heroHeadingLine1"></wm-label>
+                            <wm-label padding="unset" caption="for every need" class="label-section-subtitle section_subtitle_1" variant="section-subtitle" name="heroHeadingLine2"></wm-label>
+                        </wm-container>
+                        <wm-label padding="unset" caption="From personal loans to business needs, our range of financial solutions is designed to simplify borrowing." class="label-section-description section_description" variant="section-description" name="heroDescription"></wm-label>
+                    </wm-container>
+                </wm-container>
+                <wm-container direction="column" padding="0 56px 0 56px" alignment="middle-center" height="fill" width="554" gap="40" class="right_section bg-surface" overflow="none" name="right_section">
+                    <wm-container direction="column" padding="0 0 0 0" alignment="top-left" height="hug" width="fill" gap="12" class="back_to_application_container" overflow="none" name="back_to_application_container">
+                        <wm-picture resizemode="cover" picturesource="resources/images/imagelists/login/image_14.png" width="122" height="28" name="headerLogo"></wm-picture>
+                        <wm-label padding="unset" caption="Login" class="label-login-title login_title" variant="login-title" name="loginTitle"></wm-label>
+                    </wm-container>
+                    <wm-form enctype="application/x-www-form-urlencoded" captionposition="floating" errormessage="" method="post" show="true" title="" overflow="none" width="100%" height="192px" name="form_fields_container" class="form-autocode-form">
+                        <wm-container class="form_fields_container" name="formFieldsWrapper" padding="0 0 0 0" alignment="top-left" height="192px" width="100%" gap="24" direction="column">
+                            <wm-form-field readonly="false" name="username" displayname="Username" key="username" type="string" show="true" widget="text" variant="outlined" width="100%" height="56px" defaultvalue="" class="rounded-1 bg-on-primary"></wm-form-field>
+                            <wm-form-field readonly="false" name="password" displayname="Password" key="password" type="string" show="true" widget="text" variant="outlined" width="100%" height="56px" defaultvalue="" class="rounded-1 bg-on-primary" inputtype="password"></wm-form-field>
+                            <wm-container direction="row" padding="0 0 0 0" alignment="center" height="hug" width="fill" gap="auto" class="frame_2147227382" overflow="none" name="rememberMeAndForgotContainer">
+                                <wm-container direction="row" padding="0 0 0 0" alignment="middle-left" height="hug" width="156" gap="16" class="frame_2147227381" overflow="none" name="rememberMeContainer">
+                                    <wm-checkboxset disabled="false" dataset="Remember me" itemsperrow="sm-1 md-1" variant="standard" name="rememberMeCheckbox"></wm-checkboxset>
+                                </wm-container>
+                                <wm-button caption="Forgot password?" type="button" margin="unset" iconclass="" width="146px" height="32px" class="btn-button" variant="button" name="forgotPasswordButton"></wm-button>
+                            </wm-container>
+                        </wm-container>
+                    </wm-form>
+                    <wm-container direction="column" padding="0 0 0 0" alignment="top-left" height="hug" width="fill" gap="12" class="button_container" overflow="none" name="button_container">
+                        <wm-button caption="Login" type="button" margin="unset" iconclass="" width="100%" height="48px" class="w-100 btn-button-1" on-click="Actions.goToPage_Dashboard.invoke()" variant="button-1" name="loginButton"></wm-button>
+                        <wm-container direction="row" padding="0 0 0 0" alignment="middle-center" height="hug" width="fill" gap="8" class="sign_up_offer" overflow="none" name="sign_up_offer">
+                            <wm-label padding="unset" caption="Dont have an account?" class="label-description-1 description_1" variant="description-1" name="signUpPrompt"></wm-label>
+                            <wm-button caption="Create Account" type="button" margin="unset" iconclass="" width="130px" height="32px" class="btn-button" variant="button" name="createAccountButton"></wm-button>
+                        </wm-container>
+                    </wm-container>
+                </wm-container>
+            </wm-container>
+        </wm-page-content>
+    </wm-content>
+</wm-page>

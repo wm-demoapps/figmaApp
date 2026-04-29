@@ -1,0 +1,109 @@
+<wm-page name="personal_details_page">
+    <wm-header content="Top_Nav6681024525" name="top_navigation_header">
+    </wm-header>
+    <wm-content name="documents_upload">
+        <wm-page-content columnwidth="12" name="main_page_content">
+            <wm-container direction="column" padding="0 0 0 0" alignment="top-left" height="fill" width="fill" gap="0" class="documents_upload bg-surface" overflow="none" name="documents_upload">
+                <wm-wizard stepstyle="justified" class="wizard-number wizard-vertical  wizard-custom-stepper" defaultstep="wizardstep1" variant="custom-stepper" name="personal_details_wizard">
+                    <wm-wizardstep iconclass="" title="Personal Details" name="personal_details_step"><wm-container direction="column" padding="44px 0 0 0" alignment="top-center" height="hug" width="1031" gap="0" class="container_3" overflow="none" name="personal_details_step_container_1">
+                            <wm-container direction="column" padding="0 100px 0 100px" alignment="top-center" height="775" width="fill" gap="24" class="personal_details_container" overflow="none" name="personal_details_container">
+                                <wm-container direction="column" padding="0 0 0 0" alignment="middle-left" height="hug" width="fill" gap="4" class="documents_upload_instructions" overflow="none" name="documents_upload_instructions">
+                                    <wm-label padding="unset" caption="Personal Details" class="label-personal-details personal_details_1" variant="personal-details" name="personal_details_title_label_1"></wm-label>
+                                    <wm-label padding="unset" caption="Please enter your personal Details below" class="label-please-enter-your-pe please_enter_your_pe" variant="please-enter-your-pe" name="personal_details_instructions_label_1"></wm-label>
+                                </wm-container>
+                                <wm-container direction="column" padding="0 0 0 0" alignment="center" height="fill" width="fill" gap="auto" class="personal_details_form" clipcontent="true" overflow="none" name="personal_details_form">
+                                    <wm-form enctype="application/x-www-form-urlencoded" captionposition="floating" errormessage="" method="post" show="true" title="" overflow="none" width="100%" height="100%" name="personal_details_form" class="form-autocode-form">
+                                        <wm-container class="input_fields_container w-100" name="form_fields_container" padding="0 0 0 0" alignment="top-left" height="100%" width="100%" gap="44" direction="column">
+                                            <wm-container direction="row" padding="0 0 0 0" alignment="middle-center" height="hug" width="fill" gap="32" class="input_row" overflow="none" name="name_fields_row">
+                                                <wm-form-field readonly="false" name="first_name" displayname="First Name" key="first_name" type="string" show="true" widget="text" variant="outlined" width="100%" height="56px" defaultvalue="" class="rounded-1"></wm-form-field>
+                                                <wm-form-field readonly="false" name="last_name" displayname="Last Name" key="last_name" type="string" show="true" widget="text" variant="outlined" width="100%" height="56px" defaultvalue="" class="rounded-1"></wm-form-field>
+                                            </wm-container>
+                                            <wm-container direction="row" padding="0 0 0 0" alignment="middle-center" height="hug" width="fill" gap="32" class="input_row_1" overflow="none" name="dob_ssn_row">
+                                                <wm-form-field displayname="Date of birth" widget="date" show="true" type="custom" name="date_of_birth" key="date_of_birth" width="100%" height="56px" variant="standard" class="rounded-1"></wm-form-field>
+                                                <wm-form-field readonly="false" name="social_security_number" displayname="Social Security Number" key="social_security_number" type="string" show="true" widget="text" variant="outlined" width="100%" height="56px" defaultvalue="" class="rounded-1"></wm-form-field>
+                                            </wm-container>
+                                            <wm-container direction="row" padding="0 0 0 0" alignment="middle-center" height="hug" width="fill" gap="32" class="input_row_2" overflow="none" name="email_mobile_row">
+                                                <wm-form-field readonly="false" name="email_address" displayname="Email address" key="email_address" type="string" show="true" widget="text" variant="outlined" width="100%" height="56px" defaultvalue="" class="rounded-1"></wm-form-field>
+                                                <wm-form-field readonly="false" name="mobile_number" displayname="Mobile number" key="mobile_number" type="string" show="true" widget="text" variant="outlined" width="100%" height="56px" defaultvalue="" hint="We will use this to contact you" class="rounded-1"></wm-form-field>
+                                            </wm-container>
+                                            <wm-container direction="row" padding="0 0 0 0" alignment="middle-center" height="hug" width="fill" gap="32" class="input_row_3" overflow="none" name="address_fields_row">
+                                                <wm-form-field readonly="false" name="address" displayname="Address" key="address" type="string" show="true" widget="text" variant="outlined" width="100%" height="56px" defaultvalue="" class="rounded-1"></wm-form-field>
+                                                <wm-container direction="row" padding="0 0 0 0" alignment="middle-left" height="hug" width="400" gap="20" class="input_row_4" overflow="none" name="area_code_state_row">
+                                                    <wm-form-field readonly="false" name="area_code" displayname="Area Code" key="area_code" type="string" show="true" widget="text" variant="outlined" width="100%" height="56px" defaultvalue="" class="rounded-1"></wm-form-field>
+                                                    <wm-form-field displayname="State" widget="select" show="true" type="custom" name="state" key="state" width="100%" height="56px" variant="standard">
+                                                    </wm-form-field>
+                                                </wm-container>
+                                            </wm-container>
+                                        </wm-container>
+                                    </wm-form>
+                                    <wm-picture resizemode="cover" picturesource="resources/images/imagelists/personal_details/map_image.png" width="831" height="294.64544677734375" name="map_image"></wm-picture>
+                                </wm-container>
+                            </wm-container>
+                            <wm-container direction="row" padding="0 100px 0 100px" alignment="middle-right" height="90" width="fill" gap="466" class="footer_container" overflow="none" name="wizard_footer_container_1">
+                                <wm-button caption="Documents Upload" type="button" margin="unset" iconclass="mi mi-arrow-forward" width="201px" height="42px" class="btn-button-3" variant="button-3" name="documents_upload_button"></wm-button>
+                            </wm-container>
+                        </wm-container></wm-wizardstep>
+                    <wm-wizardstep iconclass="" title="Documents Upload" name="documents_upload_step"><wm-container direction="column" padding="44px 0 0 0" alignment="top-center" height="909" width="fill" gap="0" class="container_3" overflow="none" name="personal_details_step_container_2">
+                            <wm-container direction="column" padding="0 100px 0 100px" alignment="top-left" height="fill" width="fill" gap="32" class="personal_details_container" overflow="none" name="personal_details_container">
+                                <wm-container direction="column" padding="0 0 0 0" alignment="middle-left" height="hug" width="fill" gap="4" class="documents_upload_instructions" overflow="none" name="documents_upload_instructions">
+                                    <wm-label padding="unset" caption="Documents Upload" class="label-personal-details personal_details" variant="personal-details" name="personal_details_title_label_2"></wm-label>
+                                    <wm-label padding="unset" caption="Please upload all documents" class="label-please-enter-your-pe please_enter_your_pe" variant="please-enter-your-pe" name="personal_details_instructions_label_2"></wm-label>
+                                </wm-container>
+                                <wm-container direction="column" padding="0 0 0 0" alignment="top-left" height="fill" width="fill" gap="12" class="documents_list" overflow="none" name="documents_list">
+                                    <wm-label padding="unset" caption="Upload the following documents" class="label-title documents_list_title" variant="title" name="documents_upload_title_label"></wm-label>
+                                    <wm-container direction="column" padding="0 0 0 0" alignment="top-left" height="hug" width="fill" gap="4" class="documents_container" overflow="none" name="documents_container">
+                                        <wm-container direction="row" padding="0 16px 0 16px" alignment="middle-center" height="56" width="fill" gap="8" class="document_item rounded-1" overflow="none" name="document_item">
+                                            <wm-picture resizemode="cover" picturesource="resources/images/imagelists/documents_upload/document_icon.png" width="16" height="16" name="document_icon"></wm-picture>
+                                            <wm-label padding="unset" caption="Passport / Driver’s license / SSN" class="label-document-description document_description" variant="document-description" name="passport_document_label"></wm-label>
+                                            <wm-label padding="unset" caption="Passport. jpeg" class="label-document-file-name document_file_name" variant="document-file-name" name="passport_filename_label"></wm-label>
+                                            <wm-button caption="" type="button" margin="unset" width="24px" height="24px" padding="0 0 0 0" iconclass="mi mi-close" disabled="false" name="passport_delete_button" class="btn-icon-button" variant="icon-button"></wm-button>
+                                        </wm-container>
+                                        <wm-container direction="row" padding="0 16px 0 16px" alignment="middle-center" height="56" width="fill" gap="8" class="document_item_1 rounded-1" overflow="none" name="document_item_1">
+                                            <wm-picture resizemode="cover" picturesource="resources/images/imagelists/documents_upload/document_item_2.png" width="16" height="16" name="bank_statements_icon"></wm-picture>
+                                            <wm-container direction="row" padding="0 0 0 0" alignment="middle-left" height="hug" width="fill" gap="5" class="document_description_container" overflow="none" name="document_description_container">
+                                                <wm-label padding="unset" caption="Bank statements" class="label-document-description document_name" variant="document-description" name="bank_statements_label"></wm-label>
+                                                <wm-label padding="unset" caption="Last 3 months" class="label-document-file-name document_details" variant="document-file-name" name="bank_statements_period_label"></wm-label>
+                                            </wm-container>
+                                            <wm-label padding="unset" caption="Nov 25-Jan 26 Bank Statements.pdf" class="label-document-file-name document_file_name_1" variant="document-file-name" name="bank_statements_filename_label"></wm-label>
+                                            <wm-button caption="" type="button" margin="unset" width="24px" height="24px" padding="0 0 0 0" iconclass="mi mi-close" disabled="false" name="bank_statements_delete_button" class="btn-icon-button" variant="icon-button"></wm-button>
+                                        </wm-container>
+                                        <wm-container direction="row" padding="0 16px 0 16px" alignment="middle-center" height="56" width="fill" gap="8" class="document_item_3 rounded-1" overflow="none" name="document_item_3">
+                                            <wm-picture resizemode="cover" picturesource="resources/images/imagelists/documents_upload/image_11.png" width="16" height="16" name="w2_forms_icon"></wm-picture>
+                                            <wm-container direction="row" padding="0 0 0 0" alignment="middle-left" height="hug" width="fill" gap="5" class="document_description_container_1" overflow="none" name="w2_forms_description_container">
+                                                <wm-label padding="unset" caption="W2 forms" class="label-document-description document_name_1" variant="document-description" name="w2_forms_label"></wm-label>
+                                                <wm-label padding="unset" caption="Last 1 year" class="label-document-file-name document_details_1" variant="document-file-name" name="w2_forms_period_label"></wm-label>
+                                            </wm-container>
+                                            <wm-label padding="unset" caption="W2 2025.pdf" class="label-document-file-name document_file_name_2" variant="document-file-name" name="w2_forms_filename_label"></wm-label>
+                                            <wm-button caption="" type="button" margin="unset" width="24px" height="24px" padding="0 0 0 0" iconclass="mi mi-close" disabled="false" name="w2_forms_delete_button" class="btn-icon-button" variant="icon-button"></wm-button>
+                                        </wm-container>
+                                        <wm-container direction="row" padding="0 16px 0 16px" alignment="middle-center" height="56" width="fill" gap="8" class="document_item_4 rounded-1" overflow="none" name="document_item_4">
+                                            <wm-picture resizemode="cover" picturesource="resources/images/imagelists/documents_upload/document_icon_1.png" width="16" height="16" name="employment_proof_icon"></wm-picture>
+                                            <wm-label padding="unset" caption="Employment proof" class="label-document-description document_description_1" variant="document-description" name="employment_proof_label"></wm-label>
+                                            <wm-button caption="Upload" type="button" margin="unset" iconclass="" width="73px" height="32px" class="btn-button-1-1" variant="button-1-1" name="employment_proof_upload_button"></wm-button>
+                                        </wm-container>
+                                        <wm-container direction="row" padding="0 16px 0 16px" alignment="middle-center" height="56" width="fill" gap="8" class="document_item_5 rounded-1" overflow="none" name="document_item_5">
+                                            <wm-picture resizemode="cover" picturesource="resources/images/imagelists/documents_upload/image_13.png" width="16" height="16" name="home_purchase_agreement_icon"></wm-picture>
+                                            <wm-label padding="unset" caption="Home purchase agreement" class="label-document-description document_description_2" variant="document-description" name="home_purchase_agreement_label"></wm-label>
+                                            <wm-label padding="unset" caption="HPA.png" class="label-document-file-name document_file_name_3" variant="document-file-name" name="home_purchase_agreement_filename_label"></wm-label>
+                                            <wm-button caption="" type="button" margin="unset" width="24px" height="24px" padding="0 0 0 0" iconclass="mi mi-close" disabled="false" name="home_purchase_agreement_delete_button" class="btn-icon-button" variant="icon-button"></wm-button>
+                                        </wm-container>
+                                    </wm-container>
+                                </wm-container>
+                            </wm-container>
+                            <wm-container direction="row" padding="0 100px 0 100px" alignment="center" height="90" width="fill" gap="auto" class="footer_container" overflow="none" name="wizard_footer_container_2">
+                                <wm-container direction="row" padding="0 0 0 0" alignment="middle-right" height="hug" width="fill" gap="20" class="footer_actions_container" overflow="none" name="wizard_navigation_container">
+                                    <wm-picture resizemode="cover" picturesource="resources/images/imagelists/documents_upload/autopay_icon.png" width="35" height="35" name="autopay_icon"></wm-picture>
+                                    <wm-button caption="Personal Details" type="button" margin="unset" iconclass="mi mi-arrow-back" width="179px" height="42px" class="btn-button-2-1" variant="button-2-1" name="personal_details_back_button"></wm-button>
+                                    <wm-button caption="Loan Details" type="button" margin="unset" iconclass="mi mi-arrow-forward" width="154px" height="42px" class="btn-button-3" variant="button-3" name="loan_details_next_button"></wm-button>
+                                </wm-container>
+                            </wm-container>
+                        </wm-container></wm-wizardstep>
+                    <wm-wizardstep iconclass="" title="Loan Details" name="loan_details_step">
+                    </wm-wizardstep>
+                    <wm-wizardstep iconclass="" title="Review application" name="review_submit_step">
+                    </wm-wizardstep>
+                </wm-wizard>
+            </wm-container>
+        </wm-page-content>
+    </wm-content>
+</wm-page>

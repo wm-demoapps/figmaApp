@@ -1,0 +1,283 @@
+
+    .container_5 {flex: 1 0 0;}
+  
+					.dashboard_title { font-style:normal;text-transform:capitalize; }
+				
+    .container_11 {box-shadow: 0 12px 100px 0 rgba(0, 0, 0, 0.04);flex: 1 0 0;}
+  
+    .container_12 {flex: 1 0 0;}
+  
+					.account_health_label { align-self:stretch;font-style:normal; }
+				
+					.account_health_value { align-self:stretch;font-style:normal; }
+				
+					.payment_count { font-style:normal; }
+				
+					.payment_status { font-style:normal; }
+				
+    .container_15 {box-shadow: 0 12px 100px 0 rgba(0, 0, 0, 0.04);flex: 1 0 0;}
+  
+    .container_16 {flex: 1 0 0;}
+  
+					.outstanding_balance_label { align-self:stretch;font-style:normal; }
+				
+					.outstanding_balance_value { align-self:stretch;font-style:normal; }
+				
+					.payment_count_1 { font-style:normal; }
+				
+					.payment_status_1 { font-style:normal; }
+				
+    .container_19 {box-shadow: 0 12px 100px 0 rgba(0, 0, 0, 0.04);flex: 1 0 0;}
+  
+    .container_20 {flex: 1 0 0;}
+  
+					.monthly_emi_amount_label { font-style:normal; }
+				
+					.monthly_emi_amount_value { align-self:stretch;font-style:normal; }
+				
+					.payment_details { font-style:normal; }
+				
+    .container_23 {box-shadow: 0 12px 100px 0 rgba(0, 0, 0, 0.04);flex: 1 0 0;}
+  
+    .container_24 {flex: 1 0 0;}
+  
+					.next_milestone_label { font-style:normal; }
+				
+					.next_milestone_value { align-self:stretch;font-style:normal; }
+				
+					.payment_details_1 { font-style:normal; }
+				
+    .container_29 {box-shadow: 0 12px 100px 0 rgba(0, 0, 0, 0.04);flex: 1 0 0;}
+  
+    .container_30 {border-radius: 8px 8px 0 0;flex-shrink: 0;}
+  
+					.active_loans_label { font-style:normal; }
+				
+    .container_31 {align-items: center;align-self: stretch;display: flex;flex-direction: column;flex-shrink: 0;height: 331px;justify-content: space-between;padding: 20px;}
+  
+					.loan_type { font-style:normal; }
+				
+					.loan_amount { font-style:normal; }
+				
+    .container_35 {border-radius: 120px;}
+  
+					.auto_pay_status { font-style:normal; }
+				
+    .container_37 {align-items: center;align-self: stretch;display: flex;justify-content: space-between;}
+  
+    .container_38 {flex: 1 0 0;}
+  
+					.amount_paid_value { font-style:normal; }
+				
+					.amount_paid_label { font-style:normal; }
+				
+					.amount_remaining_value { flex:1 0 0;font-style:normal;text-align:right; }
+				
+					.amount_remaining_label { font-style:normal; }
+				
+					.loan_end_date_label { font-style:normal;text-align:right; }
+				
+					.loan_end_date { font-style:normal; }
+				
+					.loan_type_1 { font-style:normal; }
+				
+					.loan_amount_1 { font-style:normal; }
+				
+    .container_44 {border-radius: 120px;}
+  
+					.auto_pay_status_1 { font-style:normal; }
+				
+    .container_46 {align-items: center;align-self: stretch;display: flex;justify-content: space-between;}
+  
+    .container_47 {flex: 1 0 0;}
+  
+					.amount_paid_value_1 { font-style:normal; }
+				
+					.amount_paid_label_1 { font-style:normal; }
+				
+					.amount_remaining_value_1 { flex:1 0 0;font-style:normal;text-align:right; }
+				
+					.amount_remaining_label_1 { font-style:normal; }
+				
+					.loan_end_date_label_1 { font-style:normal;text-align:right; }
+				
+					.loan_end_date_1 { font-style:normal; }
+				
+    .container_50 {box-shadow: 0 12px 100px 0 rgba(0, 0, 0, 0.04);flex: 1 0 0;}
+  
+    .container_51 {border-radius: 8px 8px 0 0;flex-shrink: 0;}
+  
+					.loan_in_progress_label { font-style:normal; }
+				
+    .frame_2147227387 {align-items: flex-start;align-self: stretch;display: flex;flex-direction: column;flex-shrink: 0;gap: 10px;height: 353px;}
+  
+					.application_id { align-self:stretch;font-style:normal; }
+				
+    .container_55 {align-items: center;align-self: stretch;display: flex;justify-content: space-between;}
+  
+    .container_56 {flex: 1 0 0;}
+  
+    .container_57 {flex: 1 0 0;}
+  
+					.loan_type_label { align-self:stretch;font-style:normal; }
+				
+					.loan_type_value { align-self:stretch;font-style:normal; }
+				
+    .container_58 {flex: 1 0 0;}
+  
+    .container_59 {flex: 1 0 0;}
+  
+					.loan_amount_label { align-self:stretch;font-style:normal; }
+				
+					.loan_amount_value { align-self:stretch;font-style:normal; }
+				
+    .container_60 {flex: 1 0 0;}
+  
+    .container_61 {flex: 1 0 0;}
+  
+					.current_stage_label { align-self:stretch;font-style:normal; }
+				
+					.current_stage_value { align-self:stretch;font-style:normal; }
+				
+					.progress_information { flex:1 0 0;font-style:normal; }
+				
+					.application_id_1 { align-self:stretch;font-style:normal; }
+				
+    .container_66 {align-items: center;align-self: stretch;display: flex;justify-content: space-between;}
+  
+    .container_67 {flex: 1 0 0;}
+  
+    .container_68 {flex: 1 0 0;}
+  
+					.loan_type_label_1 { align-self:stretch;font-style:normal; }
+				
+					.loan_type_value_1 { align-self:stretch;font-style:normal; }
+				
+    .container_69 {flex: 1 0 0;}
+  
+    .container_70 {flex: 1 0 0;}
+  
+					.loan_amount_label_1 { align-self:stretch;font-style:normal; }
+				
+					.loan_amount_value_1 { align-self:stretch;font-style:normal; }
+				
+    .container_71 {flex: 1 0 0;}
+  
+    .container_72 {flex: 1 0 0;}
+  
+					.current_stage_label_1 { align-self:stretch;font-style:normal; }
+				
+					.current_stage_value_1 { align-self:stretch;font-style:normal; }
+				
+					.progress_information_1 { flex:1 0 0;font-style:normal; }
+				
+					.application_id_2 { align-self:stretch;font-style:normal; }
+				
+    .container_77 {align-items: center;align-self: stretch;display: flex;justify-content: space-between;}
+  
+    .container_78 {flex: 1 0 0;}
+  
+    .container_79 {flex: 1 0 0;}
+  
+					.loan_type_label_2 { align-self:stretch;font-style:normal; }
+				
+					.loan_type_value_2 { align-self:stretch;font-style:normal; }
+				
+    .container_80 {flex: 1 0 0;}
+  
+    .container_81 {flex: 1 0 0;}
+  
+					.loan_amount_label_2 { align-self:stretch;font-style:normal; }
+				
+					.loan_amount_value_2 { align-self:stretch;font-style:normal; }
+				
+    .container_82 {flex: 1 0 0;}
+  
+    .container_83 {flex: 1 0 0;}
+  
+					.current_stage_label_2 { align-self:stretch;font-style:normal; }
+				
+					.current_stage_value_2 { align-self:stretch;font-style:normal; }
+				
+					.progress_information_2 { flex:1 0 0;font-style:normal; }
+				
+    .container_85 {box-shadow: 0 12px 100px 0 rgba(0, 0, 0, 0.04);}
+  
+    .container_86 {border-radius: 8px 8px 0 0;flex-shrink: 0;}
+  
+					.milestones_label { font-style:normal; }
+				
+    .container_87 {flex: 1 0 0;}
+  
+    .container_88 {flex: 1 0 0;}
+  
+    .container_89 {flex: 1 0 0;}
+  
+					.milestone_title { align-self:stretch;font-style:normal;text-align:center; }
+				
+    .container_90 {flex: 1 0 0;}
+  
+					.milestone_status { align-self:stretch;font-style:normal;text-align:center; }
+				
+    .container_91 {flex: 1 0 0;}
+  
+					.milestone_reward { align-self:stretch;font-style:normal;text-align:center; }
+				
+					.milestone_date { align-self:stretch;font-style:normal;text-align:center; }
+				
+    .container_93 {flex: 1 0 0;}
+  
+					.milestone_title_1 { align-self:stretch;font-style:normal;text-align:center; }
+				
+    .container_94 {flex: 1 0 0;}
+  
+					.milestone_status_1 { align-self:stretch;font-style:normal;text-align:center; }
+				
+    .container_95 {flex: 1 0 0;}
+  
+					.milestone_reward_1 { align-self:stretch;font-style:normal;text-align:center; }
+				
+					.milestone_date_1 { align-self:stretch;font-style:normal;text-align:center; }
+				
+    .container_97 {flex: 1 0 0;}
+  
+					.milestone_title_2 { align-self:stretch;font-style:normal;text-align:center; }
+				
+    .container_98 {flex: 1 0 0;}
+  
+					.milestone_status_2 { align-self:stretch;font-style:normal;text-align:center; }
+				
+    .container_99 {flex: 1 0 0;}
+  
+					.milestone_reward_2 { align-self:stretch;font-style:normal;text-align:center; }
+				
+					.milestone_date_2 { align-self:stretch;font-style:normal;text-align:center; }
+				
+    .container_101 {flex: 1 0 0;}
+  
+					.milestone_title_3 { align-self:stretch;font-style:normal;text-align:center; }
+				
+    .container_102 {flex: 1 0 0;}
+  
+					.milestone_status_3 { align-self:stretch;font-style:normal;text-align:center; }
+				
+    .container_103 {flex: 1 0 0;}
+  
+					.milestone_reward_3 { align-self:stretch;font-style:normal;text-align:center; }
+				
+					.milestone_date_3 { align-self:stretch;font-style:normal;text-align:center; }
+				
+    .container_105 {flex: 1 0 0;}
+  
+					.milestone_title_4 { align-self:stretch;font-style:normal;text-align:center; }
+				
+    .container_106 {flex: 1 0 0;}
+  
+					.milestone_status_4 { align-self:stretch;font-style:normal;text-align:center; }
+				
+    .container_107 {flex: 1 0 0;}
+  
+					.milestone_reward_4 { font-style:normal;text-align:center;width:100px; }
+				
+					.milestone_date_4 { align-self:stretch;font-style:normal;text-align:center; }
+				

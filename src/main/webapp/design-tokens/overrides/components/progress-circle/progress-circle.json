@@ -1,0 +1,1 @@
+{"progress-circle":{"meta":{"appearances":{"determinate":{"source":"autocode"}}},"appearances":{"determinate":{"mapping":{"stroke":{"inactive":{"value":"{color.secondary.container.@.value}","type":"color"},"active":{"value":"{color.primary.@.value}","type":"color"}}}}}}}

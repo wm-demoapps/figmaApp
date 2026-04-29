@@ -1,0 +1,1656 @@
+@import url('https://fonts.googleapis.com/css2?family=DM Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+
+
+.fst-normal {
+  font-style: normal;
+}
+
+
+
+.wm-app .bg-primary {
+  background-color: var(--wm-color-primary);
+}
+.wm-app .bg-primary-container {
+  background-color: var(--wm-color-primary-container);
+}
+.wm-app .bg-primary-fixed {
+  background-color: var(--wm-color-primary-fixed);
+}
+.wm-app .bg-primary-fixed-dim {
+  background-color: var(--wm-color-primary-fixed-dim);
+}
+.wm-app .bg-on-primary {
+  background-color: var(--wm-color-on-primary);
+}
+.wm-app .bg-on-primary-container {
+  background-color: var(--wm-color-on-primary-container);
+}
+.wm-app .bg-on-primary-fixed {
+  background-color: var(--wm-color-on-primary-fixed);
+}
+.wm-app .bg-on-primary-fixed-variant {
+  background-color: var(--wm-color-on-primary-fixed-variant);
+}
+.wm-app .bg-secondary {
+  background-color: var(--wm-color-secondary);
+}
+.wm-app .bg-secondary-container {
+  background-color: var(--wm-color-secondary-container);
+}
+.wm-app .bg-secondary-fixed {
+  background-color: var(--wm-color-secondary-fixed);
+}
+.wm-app .bg-secondary-fixed-dim {
+  background-color: var(--wm-color-secondary-fixed-dim);
+}
+.wm-app .bg-on-secondary {
+  background-color: var(--wm-color-on-secondary);
+}
+.wm-app .bg-on-secondary-container {
+  background-color: var(--wm-color-on-secondary-container);
+}
+.wm-app .bg-on-secondary-fixed {
+  background-color: var(--wm-color-on-secondary-fixed);
+}
+.wm-app .bg-on-secondary-fixed-variant {
+  background-color: var(--wm-color-on-secondary-fixed-variant);
+}
+.wm-app .bg-tertiary {
+  background-color: var(--wm-color-tertiary);
+}
+.wm-app .bg-tertiary-container {
+  background-color: var(--wm-color-tertiary-container);
+}
+.wm-app .bg-tertiary-fixed {
+  background-color: var(--wm-color-tertiary-fixed);
+}
+.wm-app .bg-tertiary-fixed-dim {
+  background-color: var(--wm-color-tertiary-fixed-dim);
+}
+.wm-app .bg-on-tertiary {
+  background-color: var(--wm-color-on-tertiary);
+}
+.wm-app .bg-on-tertiary-container {
+  background-color: var(--wm-color-on-tertiary-container);
+}
+.wm-app .bg-on-tertiary-fixed {
+  background-color: var(--wm-color-on-tertiary-fixed);
+}
+.wm-app .bg-on-tertiary-fixed-variant {
+  background-color: var(--wm-color-on-tertiary-fixed-variant);
+}
+.wm-app .bg-error {
+  background-color: var(--wm-color-error);
+}
+.wm-app .bg-error-container {
+  background-color: var(--wm-color-error-container);
+}
+.wm-app .bg-on-error {
+  background-color: var(--wm-color-on-error);
+}
+.wm-app .bg-on-error-container {
+  background-color: var(--wm-color-on-error-container);
+}
+.wm-app .bg-background {
+  background-color: var(--wm-color-background);
+}
+.wm-app .bg-on-background {
+  background-color: var(--wm-color-on-background);
+}
+.wm-app .bg-outline {
+  background-color: var(--wm-color-outline);
+}
+.wm-app .bg-outline-variant {
+  background-color: var(--wm-color-outline-variant);
+}
+.wm-app .bg-shadow {
+  background-color: var(--wm-color-shadow);
+}
+.wm-app .bg-scrim {
+  background-color: var(--wm-color-scrim);
+}
+.wm-app .bg-surface {
+  background-color: var(--wm-color-surface);
+}
+.wm-app .bg-surface-variant {
+  background-color: var(--wm-color-surface-variant);
+}
+.wm-app .bg-surface-bright {
+  background-color: var(--wm-color-surface-bright);
+}
+.wm-app .bg-surface-dim {
+  background-color: var(--wm-color-surface-dim);
+}
+.wm-app .bg-surface-tint {
+  background-color: var(--wm-color-surface-tint);
+}
+.wm-app .bg-surface-container {
+  background-color: var(--wm-color-surface-container);
+}
+.wm-app .bg-surface-container-low {
+  background-color: var(--wm-color-surface-container-low);
+}
+.wm-app .bg-surface-container-lowest {
+  background-color: var(--wm-color-surface-container-lowest);
+}
+.wm-app .bg-surface-container-high {
+  background-color: var(--wm-color-surface-container-high);
+}
+.wm-app .bg-surface-container-highest {
+  background-color: var(--wm-color-surface-container-highest);
+}
+.wm-app .bg-on-surface {
+  background-color: var(--wm-color-on-surface);
+}
+.wm-app .bg-on-surface-variant {
+  background-color: var(--wm-color-on-surface-variant);
+}
+.wm-app .bg-inverse-surface {
+  background-color: var(--wm-color-inverse-surface);
+}
+.wm-app .bg-inverse-on-surface {
+  background-color: var(--wm-color-inverse-on-surface);
+}
+.wm-app .bg-inverse-primary {
+  background-color: var(--wm-color-inverse-primary);
+}
+.wm-app .bg-white {
+  background-color: var(--wm-color-white);
+}
+.wm-app .bg-black {
+  background-color: var(--wm-color-black);
+}
+
+.wm-app .text-primary {
+  color: var(--wm-color-primary);
+}
+.wm-app .text-primary-container {
+  color: var(--wm-color-primary-container);
+}
+.wm-app .text-primary-fixed {
+  color: var(--wm-color-primary-fixed);
+}
+.wm-app .text-primary-fixed-dim {
+  color: var(--wm-color-primary-fixed-dim);
+}
+.wm-app .text-on-primary {
+  color: var(--wm-color-on-primary);
+}
+.wm-app .text-on-primary-container {
+  color: var(--wm-color-on-primary-container);
+}
+.wm-app .text-on-primary-fixed {
+  color: var(--wm-color-on-primary-fixed);
+}
+.wm-app .text-on-primary-fixed-variant {
+  color: var(--wm-color-on-primary-fixed-variant);
+}
+.wm-app .text-secondary {
+  color: var(--wm-color-secondary);
+}
+.wm-app .text-secondary-container {
+  color: var(--wm-color-secondary-container);
+}
+.wm-app .text-secondary-fixed {
+  color: var(--wm-color-secondary-fixed);
+}
+.wm-app .text-secondary-fixed-dim {
+  color: var(--wm-color-secondary-fixed-dim);
+}
+.wm-app .text-on-secondary {
+  color: var(--wm-color-on-secondary);
+}
+.wm-app .text-on-secondary-container {
+  color: var(--wm-color-on-secondary-container);
+}
+.wm-app .text-on-secondary-fixed {
+  color: var(--wm-color-on-secondary-fixed);
+}
+.wm-app .text-on-secondary-fixed-variant {
+  color: var(--wm-color-on-secondary-fixed-variant);
+}
+.wm-app .text-tertiary {
+  color: var(--wm-color-tertiary);
+}
+.wm-app .text-tertiary-container {
+  color: var(--wm-color-tertiary-container);
+}
+.wm-app .text-tertiary-fixed {
+  color: var(--wm-color-tertiary-fixed);
+}
+.wm-app .text-tertiary-fixed-dim {
+  color: var(--wm-color-tertiary-fixed-dim);
+}
+.wm-app .text-on-tertiary {
+  color: var(--wm-color-on-tertiary);
+}
+.wm-app .text-on-tertiary-container {
+  color: var(--wm-color-on-tertiary-container);
+}
+.wm-app .text-on-tertiary-fixed {
+  color: var(--wm-color-on-tertiary-fixed);
+}
+.wm-app .text-on-tertiary-fixed-variant {
+  color: var(--wm-color-on-tertiary-fixed-variant);
+}
+.wm-app .text-error {
+  color: var(--wm-color-error);
+}
+.wm-app .text-error-container {
+  color: var(--wm-color-error-container);
+}
+.wm-app .text-on-error {
+  color: var(--wm-color-on-error);
+}
+.wm-app .text-on-error-container {
+  color: var(--wm-color-on-error-container);
+}
+.wm-app .text-background {
+  color: var(--wm-color-background);
+}
+.wm-app .text-on-background {
+  color: var(--wm-color-on-background);
+}
+.wm-app .text-outline {
+  color: var(--wm-color-outline);
+}
+.wm-app .text-outline-variant {
+  color: var(--wm-color-outline-variant);
+}
+.wm-app .text-shadow {
+  color: var(--wm-color-shadow);
+}
+.wm-app .text-scrim {
+  color: var(--wm-color-scrim);
+}
+.wm-app .text-surface {
+  color: var(--wm-color-surface);
+}
+.wm-app .text-surface-variant {
+  color: var(--wm-color-surface-variant);
+}
+.wm-app .text-surface-bright {
+  color: var(--wm-color-surface-bright);
+}
+.wm-app .text-surface-dim {
+  color: var(--wm-color-surface-dim);
+}
+.wm-app .text-surface-tint {
+  color: var(--wm-color-surface-tint);
+}
+.wm-app .text-surface-container {
+  color: var(--wm-color-surface-container);
+}
+.wm-app .text-surface-container-low {
+  color: var(--wm-color-surface-container-low);
+}
+.wm-app .text-surface-container-lowest {
+  color: var(--wm-color-surface-container-lowest);
+}
+.wm-app .text-surface-container-high {
+  color: var(--wm-color-surface-container-high);
+}
+.wm-app .text-surface-container-highest {
+  color: var(--wm-color-surface-container-highest);
+}
+.wm-app .text-on-surface {
+  color: var(--wm-color-on-surface);
+}
+.wm-app .text-on-surface-variant {
+  color: var(--wm-color-on-surface-variant);
+}
+.wm-app .text-inverse-surface {
+  color: var(--wm-color-inverse-surface);
+}
+.wm-app .text-inverse-on-surface {
+  color: var(--wm-color-inverse-on-surface);
+}
+.wm-app .text-inverse-primary {
+  color: var(--wm-color-inverse-primary);
+}
+.wm-app .text-white {
+  color: var(--wm-color-white);
+}
+.wm-app .text-black {
+  color: var(--wm-color-black);
+}
+
+.wm-app .body-large-family {
+  font-family: var(--wm-body-large-font-family);
+}
+.wm-app .body-large-weight {
+  font-weight: var(--wm-body-large-font-weight);
+}
+.wm-app .body-large-size {
+  font-size: var(--wm-body-large-font-size);
+}
+.wm-app .body-large-line-height {
+  line-height: var(--wm-body-large-line-height);
+}
+.wm-app .body-large-tracking {
+  letter-spacing: var(--wm-body-large-letter-spacing);
+}
+.wm-app .body-medium-family {
+  font-family: var(--wm-body-medium-font-family);
+}
+.wm-app .body-medium-weight {
+  font-weight: var(--wm-body-medium-font-weight);
+}
+.wm-app .body-medium-size {
+  font-size: var(--wm-body-medium-font-size);
+}
+.wm-app .body-medium-line-height {
+  line-height: var(--wm-body-medium-line-height);
+}
+.wm-app .body-medium-tracking {
+  letter-spacing: var(--wm-body-medium-letter-spacing);
+}
+.wm-app .body-small-family {
+  font-family: var(--wm-body-small-font-family);
+}
+.wm-app .body-small-weight {
+  font-weight: var(--wm-body-small-font-weight);
+}
+.wm-app .body-small-size {
+  font-size: var(--wm-body-small-font-size);
+}
+.wm-app .body-small-line-height {
+  line-height: var(--wm-body-small-line-height);
+}
+.wm-app .body-small-tracking {
+  letter-spacing: var(--wm-body-small-letter-spacing);
+}
+.wm-app .h1-family {
+  font-family: var(--wm-h1-font-family);
+}
+.wm-app .h1-weight {
+  font-weight: var(--wm-h1-font-weight);
+}
+.wm-app .h1-size {
+  font-size: var(--wm-h1-font-size);
+}
+.wm-app .h1-line-height {
+  line-height: var(--wm-h1-line-height);
+}
+.wm-app .h1-tracking {
+  letter-spacing: var(--wm-h1-letter-spacing);
+}
+.wm-app .h2-family {
+  font-family: var(--wm-h2-font-family);
+}
+.wm-app .h2-weight {
+  font-weight: var(--wm-h2-font-weight);
+}
+.wm-app .h2-size {
+  font-size: var(--wm-h2-font-size);
+}
+.wm-app .h2-line-height {
+  line-height: var(--wm-h2-line-height);
+}
+.wm-app .h2-tracking {
+  letter-spacing: var(--wm-h2-letter-spacing);
+}
+.wm-app .h3-family {
+  font-family: var(--wm-h3-font-family);
+}
+.wm-app .h3-weight {
+  font-weight: var(--wm-h3-font-weight);
+}
+.wm-app .h3-size {
+  font-size: var(--wm-h3-font-size);
+}
+.wm-app .h3-line-height {
+  line-height: var(--wm-h3-line-height);
+}
+.wm-app .h3-tracking {
+  letter-spacing: var(--wm-h3-letter-spacing);
+}
+.wm-app .h4-family {
+  font-family: var(--wm-h4-font-family);
+}
+.wm-app .h4-weight {
+  font-weight: var(--wm-h4-font-weight);
+}
+.wm-app .h4-size {
+  font-size: var(--wm-h4-font-size);
+}
+.wm-app .h4-line-height {
+  line-height: var(--wm-h4-line-height);
+}
+.wm-app .h4-tracking {
+  letter-spacing: var(--wm-h4-letter-spacing);
+}
+.wm-app .h5-family {
+  font-family: var(--wm-h5-font-family);
+}
+.wm-app .h5-weight {
+  font-weight: var(--wm-h5-font-weight);
+}
+.wm-app .h5-size {
+  font-size: var(--wm-h5-font-size);
+}
+.wm-app .h5-line-height {
+  line-height: var(--wm-h5-line-height);
+}
+.wm-app .h5-tracking {
+  letter-spacing: var(--wm-h5-letter-spacing);
+}
+.wm-app .h6-family {
+  font-family: var(--wm-h6-font-family);
+}
+.wm-app .h6-weight {
+  font-weight: var(--wm-h6-font-weight);
+}
+.wm-app .h6-size {
+  font-size: var(--wm-h6-font-size);
+}
+.wm-app .h6-line-height {
+  line-height: var(--wm-h6-line-height);
+}
+.wm-app .h6-tracking {
+  letter-spacing: var(--wm-h6-letter-spacing);
+}
+.wm-app .p-family {
+  font-family: var(--wm-p-font-family);
+}
+.wm-app .p-weight {
+  font-weight: var(--wm-p-font-weight);
+}
+.wm-app .p-size {
+  font-size: var(--wm-p-font-size);
+}
+.wm-app .p-line-height {
+  line-height: var(--wm-p-line-height);
+}
+.wm-app .p-tracking {
+  letter-spacing: var(--wm-p-letter-spacing);
+}
+.wm-app .label-large-family {
+  font-family: var(--wm-label-large-font-family);
+}
+.wm-app .label-large-weight {
+  font-weight: var(--wm-label-large-font-weight);
+}
+.wm-app .label-large-size {
+  font-size: var(--wm-label-large-font-size);
+}
+.wm-app .label-large-line-height {
+  line-height: var(--wm-label-large-line-height);
+}
+.wm-app .label-large-tracking {
+  letter-spacing: var(--wm-label-large-letter-spacing);
+}
+.wm-app .label-medium-family {
+  font-family: var(--wm-label-medium-font-family);
+}
+.wm-app .label-medium-weight {
+  font-weight: var(--wm-label-medium-font-weight);
+}
+.wm-app .label-medium-size {
+  font-size: var(--wm-label-medium-font-size);
+}
+.wm-app .label-medium-line-height {
+  line-height: var(--wm-label-medium-line-height);
+}
+.wm-app .label-medium-tracking {
+  letter-spacing: var(--wm-label-medium-letter-spacing);
+}
+.wm-app .display-large-family {
+  font-family: var(--wm-label-small-font-family);
+}
+.wm-app .display-large-weight {
+  font-weight: var(--wm-label-small-font-weight);
+}
+.wm-app .display-large-size {
+  font-size: var(--wm-label-small-font-size);
+}
+.wm-app .display-large-line-height {
+  line-height: var(--wm-label-small-line-height);
+}
+.wm-app .display-large-tracking {
+  letter-spacing: var(--wm-label-small-letter-spacing);
+}
+.wm-app .display-medium-family {
+  font-family: var(--wm-display-large-font-family);
+}
+.wm-app .display-medium-weight {
+  font-weight: var(--wm-display-large-font-weight);
+}
+.wm-app .display-medium-size {
+  font-size: var(--wm-display-large-font-size);
+}
+.wm-app .display-medium-line-height {
+  line-height: var(--wm-display-large-line-height);
+}
+.wm-app .display-medium-tracking {
+  letter-spacing: var(--wm-display-large-letter-spacing);
+}
+.wm-app .display-small-family {
+  font-family: var(--wm-display-medium-font-family);
+}
+.wm-app .display-small-weight {
+  font-weight: var(--wm-display-medium-font-weight);
+}
+.wm-app .display-small-size {
+  font-size: var(--wm-display-medium-font-size);
+}
+.wm-app .display-small-line-height {
+  line-height: var(--wm-display-medium-line-height);
+}
+.wm-app .display-small-tracking {
+  letter-spacing: var(--wm-display-medium-letter-spacing);
+}
+.wm-app .display-small-family {
+  font-family: var(--wm-display-small-font-family);
+}
+.wm-app .display-small-weight {
+  font-weight: var(--wm-display-small-font-weight);
+}
+.wm-app .display-small-size {
+  font-size: var(--wm-display-small-font-size);
+}
+.wm-app .display-small-line-height {
+  line-height: var(--wm-display-small-line-height);
+}
+.wm-app .display-small-tracking {
+  letter-spacing: var(--wm-display-small-letter-spacing);
+}
+html {
+    display: flex;
+    justify-content: center;
+}
+
+.app-linear-layout.app-linear-layout-direction-row>.app-linear-layout-item {
+    overflow: visible;
+    overflow-x: visible;
+    overflow-y: visible;
+    height: 100%;
+}
+
+:root {
+    --wm-page-content-padding: 0;
+    --wm-list-min-height: 0;
+    --wm-modal-body-padding: 0;
+    --wm-modal-margin: 0;
+    --wm-modal-width: 100%;
+}
+
+.wm-app .app-list.list-card .app-list-item, .wm-app .app-livelist.list-card .app-list-item {
+	width: auto;
+}
+
+.list-autocode-col {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: wrap;
+}
+
+.list-autocode-row-wrap {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+}
+
+.list-autocode-row-nowrap {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+}
+
+.no-overflow {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wm-app .list-autocode-col .col-xs-12, .wm-app .list-autocode-row-wrap .col-xs-12, .wm-app .list-autocode-row-nowrap .col-xs-12 {
+	width: auto;
+}
+
+.wm-app .app-page .app-left-panel.app-nav-rail .app-nav .app-nav-item > .app-button{
+    margin: auto;
+}
+
+.wm-app .app-page .app-container .app-left-panel.app-nav-rail, .wm-app .app-page .app-container .app-right-panel.app-nav-rail {
+	place-self: normal;
+	height: auto;
+}
+
+.wm-app .app-page .app-container .app-left-panel.app-nav-drawer, .wm-app .app-page .app-container .app-right-panel.app-nav-drawer {
+	place-self: normal;
+	height: auto;
+}
+
+.wm-app app-custom-divider .vertical-divider {
+	margin-inline: 0;
+}
+
+.wm-app .app-list-item, .wm-app .list-group:where(:not(.list-group-autolayout)) .app-list-item {
+	padding: 0;
+}
+
+.wm-app .app-livelist.list-card .list-group .app-list-item {
+	padding: 0;
+}
+
+.wm-app .app-livelist .list-group, .wm-app .app-list .list-group {
+	width: auto;
+}
+
+.wm-app .app-wizard.hide-footer .app-wizard-actions {
+    display: none;
+}
+    
+.wm-app .app-panel, .wm-app .panel {
+    width: auto;
+	background: transparent;
+	border-radius: inherit;
+	box-shadow: none;
+}
+
+.wm-app .app-form > .form-body, .wm-app .app-liveform > .form-body, .wm-app .app-livefilter > .form-body {
+	display: flex;
+    padding: 0;
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+.wm-app .app-form > .form-body > .form-elements, .wm-app .app-liveform > .form-body > .form-elements, .wm-app .app-livefilter > .form-body > .form-elements {
+	display: flex;
+    margin: 0;
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+/* Autocode: no padding on form/filter fields */
+.wm-app .app-form > .form-body > .form-elements [data-role="form-field"],
+.wm-app .app-liveform > .form-body > .form-elements [data-role="form-field"],
+.wm-app .app-livefilter > .form-body > .form-elements [data-role="form-field"],
+.wm-app .app-form > .form-body > .form-elements [data-role="filter-field"],
+.wm-app .app-liveform > .form-body > .form-elements [data-role="filter-field"],
+.wm-app .app-livefilter > .form-body > .form-elements [data-role="filter-field"] {
+	padding: 0;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps > .app-wizard-step.disabled > a .wizard-step-number{
+    border: 1px solid black;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps > .app-wizard-step.current > a .wizard-step-number .count{
+    --wm-wizard-stepper-step-count-color: #fff;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps > .app-wizard-step > a .wizard-step-number .count{
+    --wm-wizard-stepper-step-count-color : #000000FF;
+}
+
+.wm-app app-custom-divider .divider {
+	flex: 1;
+}
+
+.wm-app .app-wizard .app-wizard-actions {
+    width: 100%;
+}
+
+.wm-app .app-nav-rail .btn.app-button.btn-rounded {
+    background: transparent;
+}
+
+.wm-app .btn.app-button.btn-transparent.row-expansion-button {
+    padding: 0;
+}
+
+.wm-app .app-tabs > .tab-content {
+	width: 100%;
+}
+
+.wm-app {
+	line-height: normal;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps.nav-justified > .app-wizard-step{
+    flex: none;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps{
+    justify-content: flex-start;
+}
+
+.wm-app .app-wizard {
+    --wm-wizard-padding: 0px;
+    --wm-wizard-gap: 0px;
+}
+
+.wm-app .circle {
+	border-radius: var(--wm-radius-circle);
+} 
+    
+.wm-app .app-datagrid-cell.gap div{
+	display: flex;
+}
+
+.wm-app .btn:not(.btn-icon) + .btn:not(.btn-icon), .wm-app button:not(.btn-icon) + .btn:not(.btn-icon) {
+	margin-left: var(--wm-space-0);
+}
+
+.wm-app .flex-0 {
+    flex: 0;
+}
+
+/* Autocode: min-height = form control height only (no help block space) */
+.wm-app .app-composite-widget {
+    min-height: auto;
+}
+
+.wm-app .app-composite-widget.caption-floating .control-label{
+    top: calc(calc(100% * 0.5) - calc(var(--wm-form-control-font-size) * 0.65) - var(--wm-form-control-border-width))
+}
+
+/* Remove margin-top for caption-floating (Wave + autocode) */
+.wm-app .app-composite-widget.caption-floating {
+    margin-top: 0;
+}
+
+.wm-app .app-list-item {
+    background-color: transparent;
+}
+
+.wm-app .rounded-xs {
+    border-radius: var(--wm-radius-xs);
+}
+
+.wm-app .rounded-xxs {
+    border-radius: var(--wm-radius-xxs);
+}
+
+.wm-app .app-search.input-group .form-control{
+    height : 100%
+}
+
+.app-wizard-actions.panel-footer {
+    --wm-panel-footer-padding: 0;
+    --wm-panel-footer-border-width: 0;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+.app-linear-layout.app-linear-layout-direction-row>.app-linear-layout-item {
+    overflow: visible;
+    overflow-x: visible;
+    overflow-y: visible;
+    height: 100%;
+}
+
+:root {
+    --wm-page-content-padding: 0;
+    --wm-list-min-height: 0;
+    --wm-modal-body-padding: 0;
+    --wm-modal-margin: 0;
+    --wm-modal-width: 100%;
+}
+
+.wm-app .app-list.list-card .app-list-item, .wm-app .app-livelist.list-card .app-list-item {
+	width: auto;
+}
+
+.list-autocode-col {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: wrap;
+}
+
+.list-autocode-row-wrap {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+}
+
+.list-autocode-row-nowrap {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+}
+
+.no-overflow {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wm-app .list-autocode-col .col-xs-12, .wm-app .list-autocode-row-wrap .col-xs-12, .wm-app .list-autocode-row-nowrap .col-xs-12 {
+	width: auto;
+}
+
+.wm-app .app-page .app-left-panel.app-nav-rail .app-nav .app-nav-item > .app-button{
+    margin: auto;
+}
+
+.wm-app .app-page .app-container .app-left-panel.app-nav-rail, .wm-app .app-page .app-container .app-right-panel.app-nav-rail {
+	place-self: normal;
+	height: auto;
+}
+
+.wm-app .app-page .app-container .app-left-panel.app-nav-drawer, .wm-app .app-page .app-container .app-right-panel.app-nav-drawer {
+	place-self: normal;
+	height: auto;
+}
+
+.wm-app app-custom-divider .vertical-divider {
+	margin-inline: 0;
+}
+
+.wm-app .app-list-item, .wm-app .list-group:where(:not(.list-group-autolayout)) .app-list-item {
+	padding: 0;
+}
+
+.wm-app .app-livelist.list-card .list-group .app-list-item {
+	padding: 0;
+}
+
+.wm-app .app-livelist .list-group, .wm-app .app-list .list-group {
+	width: auto;
+}
+
+.wm-app .app-wizard.hide-footer .app-wizard-actions {
+    display: none;
+}
+    
+.wm-app .app-panel, .wm-app .panel {
+    width: auto;
+	background: transparent;
+	border-radius: inherit;
+	box-shadow: none;
+}
+
+.wm-app .app-form > .form-body, .wm-app .app-liveform > .form-body, .wm-app .app-livefilter > .form-body {
+	display: flex;
+    padding: 0;
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+.wm-app .app-form > .form-body > .form-elements, .wm-app .app-liveform > .form-body > .form-elements, .wm-app .app-livefilter > .form-body > .form-elements {
+	display: flex;
+    margin: 0;
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+/* Autocode: no padding on form/filter fields */
+.wm-app .app-form > .form-body > .form-elements [data-role="form-field"],
+.wm-app .app-liveform > .form-body > .form-elements [data-role="form-field"],
+.wm-app .app-livefilter > .form-body > .form-elements [data-role="form-field"],
+.wm-app .app-form > .form-body > .form-elements [data-role="filter-field"],
+.wm-app .app-liveform > .form-body > .form-elements [data-role="filter-field"],
+.wm-app .app-livefilter > .form-body > .form-elements [data-role="filter-field"] {
+	padding: 0;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps > .app-wizard-step.disabled > a .wizard-step-number{
+    border: 1px solid black;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps > .app-wizard-step.current > a .wizard-step-number .count{
+    --wm-wizard-stepper-step-count-color: #fff;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps > .app-wizard-step > a .wizard-step-number .count{
+    --wm-wizard-stepper-step-count-color : #000000FF;
+}
+
+.wm-app app-custom-divider .divider {
+	flex: 1;
+}
+
+.wm-app .app-wizard .app-wizard-actions {
+    width: 100%;
+}
+
+.wm-app .app-nav-rail .btn.app-button.btn-rounded {
+    background: transparent;
+}
+
+.wm-app .btn.app-button.btn-transparent.row-expansion-button {
+    padding: 0;
+}
+
+.wm-app .app-tabs > .tab-content {
+	width: 100%;
+}
+
+.wm-app {
+	line-height: normal;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps.nav-justified > .app-wizard-step{
+    flex: none;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps{
+    justify-content: flex-start;
+}
+
+.wm-app .app-wizard {
+    --wm-wizard-padding: 0px;
+    --wm-wizard-gap: 0px;
+}
+
+.wm-app .circle {
+	border-radius: var(--wm-radius-circle);
+} 
+    
+.wm-app .app-datagrid-cell.gap div{
+	display: flex;
+}
+
+.wm-app .btn:not(.btn-icon) + .btn:not(.btn-icon), .wm-app button:not(.btn-icon) + .btn:not(.btn-icon) {
+	margin-left: var(--wm-space-0);
+}
+
+.wm-app .flex-0 {
+    flex: 0;
+}
+
+/* Autocode: min-height = form control height only (no help block space) */
+.wm-app .app-composite-widget {
+    min-height: auto;
+}
+
+.wm-app .app-composite-widget.caption-floating .control-label{
+    top: calc(calc(100% * 0.5) - calc(var(--wm-form-control-font-size) * 0.65) - var(--wm-form-control-border-width))
+}
+
+/* Remove margin-top for caption-floating (Wave + autocode) */
+.wm-app .app-composite-widget.caption-floating {
+    margin-top: 0;
+}
+
+.wm-app .app-list-item {
+    background-color: transparent;
+}
+
+.wm-app .rounded-xs {
+    border-radius: var(--wm-radius-xs);
+}
+
+.wm-app .rounded-xxs {
+    border-radius: var(--wm-radius-xxs);
+}
+
+.wm-app .app-search.input-group .form-control{
+    height : 100%
+}
+
+.app-wizard-actions.panel-footer {
+    --wm-panel-footer-padding: 0;
+    --wm-panel-footer-border-width: 0;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+.app-linear-layout.app-linear-layout-direction-row>.app-linear-layout-item {
+    overflow: visible;
+    overflow-x: visible;
+    overflow-y: visible;
+    height: 100%;
+}
+
+:root {
+    --wm-page-content-padding: 0;
+    --wm-list-min-height: 0;
+    --wm-modal-body-padding: 0;
+    --wm-modal-margin: 0;
+    --wm-modal-width: 100%;
+}
+
+.wm-app .app-list.list-card .app-list-item, .wm-app .app-livelist.list-card .app-list-item {
+	width: auto;
+}
+
+.list-autocode-col {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: wrap;
+}
+
+.list-autocode-row-wrap {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+}
+
+.list-autocode-row-nowrap {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+}
+
+.no-overflow {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wm-app .list-autocode-col .col-xs-12, .wm-app .list-autocode-row-wrap .col-xs-12, .wm-app .list-autocode-row-nowrap .col-xs-12 {
+	width: auto;
+}
+
+.wm-app .app-page .app-left-panel.app-nav-rail .app-nav .app-nav-item > .app-button{
+    margin: auto;
+}
+
+.wm-app .app-page .app-container .app-left-panel.app-nav-rail, .wm-app .app-page .app-container .app-right-panel.app-nav-rail {
+	place-self: normal;
+	height: auto;
+}
+
+.wm-app .app-page .app-container .app-left-panel.app-nav-drawer, .wm-app .app-page .app-container .app-right-panel.app-nav-drawer {
+	place-self: normal;
+	height: auto;
+}
+
+.wm-app app-custom-divider .vertical-divider {
+	margin-inline: 0;
+}
+
+.wm-app .app-list-item, .wm-app .list-group:where(:not(.list-group-autolayout)) .app-list-item {
+	padding: 0;
+}
+
+.wm-app .app-livelist.list-card .list-group .app-list-item {
+	padding: 0;
+}
+
+.wm-app .app-livelist .list-group, .wm-app .app-list .list-group {
+	width: auto;
+}
+
+.wm-app .app-wizard.hide-footer .app-wizard-actions {
+    display: none;
+}
+    
+.wm-app .app-panel, .wm-app .panel {
+    width: auto;
+	background: transparent;
+	border-radius: inherit;
+	box-shadow: none;
+}
+
+.wm-app .app-form > .form-body, .wm-app .app-liveform > .form-body, .wm-app .app-livefilter > .form-body {
+	display: flex;
+    padding: 0;
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+.wm-app .app-form > .form-body > .form-elements, .wm-app .app-liveform > .form-body > .form-elements, .wm-app .app-livefilter > .form-body > .form-elements {
+	display: flex;
+    margin: 0;
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+/* Autocode: no padding on form/filter fields */
+.wm-app .app-form > .form-body > .form-elements [data-role="form-field"],
+.wm-app .app-liveform > .form-body > .form-elements [data-role="form-field"],
+.wm-app .app-livefilter > .form-body > .form-elements [data-role="form-field"],
+.wm-app .app-form > .form-body > .form-elements [data-role="filter-field"],
+.wm-app .app-liveform > .form-body > .form-elements [data-role="filter-field"],
+.wm-app .app-livefilter > .form-body > .form-elements [data-role="filter-field"] {
+	padding: 0;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps > .app-wizard-step.disabled > a .wizard-step-number{
+    border: 1px solid black;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps > .app-wizard-step.current > a .wizard-step-number .count{
+    --wm-wizard-stepper-step-count-color: #fff;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps > .app-wizard-step > a .wizard-step-number .count{
+    --wm-wizard-stepper-step-count-color : #000000FF;
+}
+
+.wm-app app-custom-divider .divider {
+	flex: 1;
+}
+
+.wm-app .app-wizard .app-wizard-actions {
+    width: 100%;
+}
+
+.wm-app .app-nav-rail .btn.app-button.btn-rounded {
+    background: transparent;
+}
+
+.wm-app .btn.app-button.btn-transparent.row-expansion-button {
+    padding: 0;
+}
+
+.wm-app .app-tabs > .tab-content {
+	width: 100%;
+}
+
+.wm-app {
+	line-height: normal;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps.nav-justified > .app-wizard-step{
+    flex: none;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps{
+    justify-content: flex-start;
+}
+
+.wm-app .app-wizard {
+    --wm-wizard-padding: 0px;
+    --wm-wizard-gap: 0px;
+}
+
+.wm-app .circle {
+	border-radius: var(--wm-radius-circle);
+} 
+    
+.wm-app .app-datagrid-cell.gap div{
+	display: flex;
+}
+
+.wm-app .btn:not(.btn-icon) + .btn:not(.btn-icon), .wm-app button:not(.btn-icon) + .btn:not(.btn-icon) {
+	margin-left: var(--wm-space-0);
+}
+
+.wm-app .flex-0 {
+    flex: 0;
+}
+
+/* Autocode: min-height = form control height only (no help block space) */
+.wm-app .app-composite-widget {
+    min-height: auto;
+}
+
+.wm-app .app-composite-widget.caption-floating .control-label{
+    top: calc(calc(100% * 0.5) - calc(var(--wm-form-control-font-size) * 0.65) - var(--wm-form-control-border-width))
+}
+
+/* Remove margin-top for caption-floating (Wave + autocode) */
+.wm-app .app-composite-widget.caption-floating {
+    margin-top: 0;
+}
+
+.wm-app .app-list-item {
+    background-color: transparent;
+}
+
+.wm-app .rounded-xs {
+    border-radius: var(--wm-radius-xs);
+}
+
+.wm-app .rounded-xxs {
+    border-radius: var(--wm-radius-xxs);
+}
+
+.wm-app .app-search.input-group .form-control{
+    height : 100%
+}
+
+.app-wizard-actions.panel-footer {
+    --wm-panel-footer-padding: 0;
+    --wm-panel-footer-border-width: 0;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+.app-linear-layout.app-linear-layout-direction-row>.app-linear-layout-item {
+    overflow: visible;
+    overflow-x: visible;
+    overflow-y: visible;
+    height: 100%;
+}
+
+:root {
+    --wm-page-content-padding: 0;
+    --wm-list-min-height: 0;
+    --wm-modal-body-padding: 0;
+    --wm-modal-margin: 0;
+    --wm-modal-width: 100%;
+}
+
+.wm-app .app-list.list-card .app-list-item, .wm-app .app-livelist.list-card .app-list-item {
+	width: auto;
+}
+
+.list-autocode-col {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: wrap;
+}
+
+.list-autocode-row-wrap {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+}
+
+.list-autocode-row-nowrap {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+}
+
+.no-overflow {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wm-app .list-autocode-col .col-xs-12, .wm-app .list-autocode-row-wrap .col-xs-12, .wm-app .list-autocode-row-nowrap .col-xs-12 {
+	width: auto;
+}
+
+.wm-app .app-page .app-left-panel.app-nav-rail .app-nav .app-nav-item > .app-button{
+    margin: auto;
+}
+
+.wm-app .app-page .app-container .app-left-panel.app-nav-rail, .wm-app .app-page .app-container .app-right-panel.app-nav-rail {
+	place-self: normal;
+	height: auto;
+}
+
+.wm-app .app-page .app-container .app-left-panel.app-nav-drawer, .wm-app .app-page .app-container .app-right-panel.app-nav-drawer {
+	place-self: normal;
+	height: auto;
+}
+
+.wm-app app-custom-divider .vertical-divider {
+	margin-inline: 0;
+}
+
+.wm-app .app-list-item, .wm-app .list-group:where(:not(.list-group-autolayout)) .app-list-item {
+	padding: 0;
+}
+
+.wm-app .app-livelist.list-card .list-group .app-list-item {
+	padding: 0;
+}
+
+.wm-app .app-livelist .list-group, .wm-app .app-list .list-group {
+	width: auto;
+}
+
+.wm-app .app-wizard.hide-footer .app-wizard-actions {
+    display: none;
+}
+    
+.wm-app .app-panel, .wm-app .panel {
+    width: auto;
+	background: transparent;
+	border-radius: inherit;
+	box-shadow: none;
+}
+
+.wm-app .app-form > .form-body, .wm-app .app-liveform > .form-body, .wm-app .app-livefilter > .form-body {
+	display: flex;
+    padding: 0;
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+.wm-app .app-form > .form-body > .form-elements, .wm-app .app-liveform > .form-body > .form-elements, .wm-app .app-livefilter > .form-body > .form-elements {
+	display: flex;
+    margin: 0;
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+/* Autocode: no padding on form/filter fields */
+.wm-app .app-form > .form-body > .form-elements [data-role="form-field"],
+.wm-app .app-liveform > .form-body > .form-elements [data-role="form-field"],
+.wm-app .app-livefilter > .form-body > .form-elements [data-role="form-field"],
+.wm-app .app-form > .form-body > .form-elements [data-role="filter-field"],
+.wm-app .app-liveform > .form-body > .form-elements [data-role="filter-field"],
+.wm-app .app-livefilter > .form-body > .form-elements [data-role="filter-field"] {
+	padding: 0;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps > .app-wizard-step.disabled > a .wizard-step-number{
+    border: 1px solid black;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps > .app-wizard-step.current > a .wizard-step-number .count{
+    --wm-wizard-stepper-step-count-color: #fff;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps > .app-wizard-step > a .wizard-step-number .count{
+    --wm-wizard-stepper-step-count-color : #000000FF;
+}
+
+.wm-app app-custom-divider .divider {
+	flex: 1;
+}
+
+.wm-app .app-wizard .app-wizard-actions {
+    width: 100%;
+}
+
+.wm-app .app-nav-rail .btn.app-button.btn-rounded {
+    background: transparent;
+}
+
+.wm-app .btn.app-button.btn-transparent.row-expansion-button {
+    padding: 0;
+}
+
+.wm-app .app-tabs > .tab-content {
+	width: 100%;
+}
+
+.wm-app {
+	line-height: normal;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps.nav-justified > .app-wizard-step{
+    flex: none;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps{
+    justify-content: flex-start;
+}
+
+.wm-app .app-wizard {
+    --wm-wizard-padding: 0px;
+    --wm-wizard-gap: 0px;
+}
+
+.wm-app .circle {
+	border-radius: var(--wm-radius-circle);
+} 
+    
+.wm-app .app-datagrid-cell.gap div{
+	display: flex;
+}
+
+.wm-app .btn:not(.btn-icon) + .btn:not(.btn-icon), .wm-app button:not(.btn-icon) + .btn:not(.btn-icon) {
+	margin-left: var(--wm-space-0);
+}
+
+.wm-app .flex-0 {
+    flex: 0;
+}
+
+/* Autocode: min-height = form control height only (no help block space) */
+.wm-app .app-composite-widget {
+    min-height: auto;
+}
+
+.wm-app .app-composite-widget.caption-floating .control-label{
+    top: calc(calc(100% * 0.5) - calc(var(--wm-form-control-font-size) * 0.65) - var(--wm-form-control-border-width))
+}
+
+/* Remove margin-top for caption-floating (Wave + autocode) */
+.wm-app .app-composite-widget.caption-floating {
+    margin-top: 0;
+}
+
+.wm-app .app-list-item {
+    background-color: transparent;
+}
+
+.wm-app .rounded-xs {
+    border-radius: var(--wm-radius-xs);
+}
+
+.wm-app .rounded-xxs {
+    border-radius: var(--wm-radius-xxs);
+}
+
+.wm-app .app-search.input-group .form-control{
+    height : 100%
+}
+
+.app-wizard-actions.panel-footer {
+    --wm-panel-footer-padding: 0;
+    --wm-panel-footer-border-width: 0;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+.app-linear-layout.app-linear-layout-direction-row>.app-linear-layout-item {
+    overflow: visible;
+    overflow-x: visible;
+    overflow-y: visible;
+    height: 100%;
+}
+
+:root {
+    --wm-page-content-padding: 0;
+    --wm-list-min-height: 0;
+    --wm-modal-body-padding: 0;
+    --wm-modal-margin: 0;
+    --wm-modal-width: 100%;
+}
+
+.wm-app .app-list.list-card .app-list-item, .wm-app .app-livelist.list-card .app-list-item {
+	width: auto;
+}
+
+.list-autocode-col {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: wrap;
+}
+
+.list-autocode-row-wrap {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+}
+
+.list-autocode-row-nowrap {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+}
+
+.no-overflow {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wm-app .list-autocode-col .col-xs-12, .wm-app .list-autocode-row-wrap .col-xs-12, .wm-app .list-autocode-row-nowrap .col-xs-12 {
+	width: auto;
+}
+
+.wm-app .app-page .app-left-panel.app-nav-rail .app-nav .app-nav-item > .app-button{
+    margin: auto;
+}
+
+.wm-app .app-page .app-container .app-left-panel.app-nav-rail, .wm-app .app-page .app-container .app-right-panel.app-nav-rail {
+	place-self: normal;
+	height: auto;
+}
+
+.wm-app .app-page .app-container .app-left-panel.app-nav-drawer, .wm-app .app-page .app-container .app-right-panel.app-nav-drawer {
+	place-self: normal;
+	height: auto;
+}
+
+.wm-app app-custom-divider .vertical-divider {
+	margin-inline: 0;
+}
+
+.wm-app .app-list-item, .wm-app .list-group:where(:not(.list-group-autolayout)) .app-list-item {
+	padding: 0;
+}
+
+.wm-app .app-livelist.list-card .list-group .app-list-item {
+	padding: 0;
+}
+
+.wm-app .app-livelist .list-group, .wm-app .app-list .list-group {
+	width: auto;
+}
+
+.wm-app .app-wizard.hide-footer .app-wizard-actions {
+    display: none;
+}
+    
+.wm-app .app-panel, .wm-app .panel {
+    width: auto;
+	background: transparent;
+	border-radius: inherit;
+	box-shadow: none;
+}
+
+.wm-app .app-form > .form-body, .wm-app .app-liveform > .form-body, .wm-app .app-livefilter > .form-body {
+	display: flex;
+    padding: 0;
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+.wm-app .app-form > .form-body > .form-elements, .wm-app .app-liveform > .form-body > .form-elements, .wm-app .app-livefilter > .form-body > .form-elements {
+	display: flex;
+    margin: 0;
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+/* Autocode: no padding on form/filter fields */
+.wm-app .app-form > .form-body > .form-elements [data-role="form-field"],
+.wm-app .app-liveform > .form-body > .form-elements [data-role="form-field"],
+.wm-app .app-livefilter > .form-body > .form-elements [data-role="form-field"],
+.wm-app .app-form > .form-body > .form-elements [data-role="filter-field"],
+.wm-app .app-liveform > .form-body > .form-elements [data-role="filter-field"],
+.wm-app .app-livefilter > .form-body > .form-elements [data-role="filter-field"] {
+	padding: 0;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps > .app-wizard-step.disabled > a .wizard-step-number{
+    border: 1px solid black;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps > .app-wizard-step.current > a .wizard-step-number .count{
+    --wm-wizard-stepper-step-count-color: #fff;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps > .app-wizard-step > a .wizard-step-number .count{
+    --wm-wizard-stepper-step-count-color : #000000FF;
+}
+
+.wm-app app-custom-divider .divider {
+	flex: 1;
+}
+
+.wm-app .app-wizard .app-wizard-actions {
+    width: 100%;
+}
+
+.wm-app .app-nav-rail .btn.app-button.btn-rounded {
+    background: transparent;
+}
+
+.wm-app .btn.app-button.btn-transparent.row-expansion-button {
+    padding: 0;
+}
+
+.wm-app .app-tabs > .tab-content {
+	width: 100%;
+}
+
+.wm-app {
+	line-height: normal;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps.nav-justified > .app-wizard-step{
+    flex: none;
+}
+
+.wm-app .app-wizard .app-wizard-heading .app-wizard-steps{
+    justify-content: flex-start;
+}
+
+.wm-app .app-wizard {
+    --wm-wizard-padding: 0px;
+    --wm-wizard-gap: 0px;
+}
+
+.wm-app .circle {
+	border-radius: var(--wm-radius-circle);
+} 
+    
+.wm-app .app-datagrid-cell.gap div{
+	display: flex;
+}
+
+.wm-app .btn:not(.btn-icon) + .btn:not(.btn-icon), .wm-app button:not(.btn-icon) + .btn:not(.btn-icon) {
+	margin-left: var(--wm-space-0);
+}
+
+.wm-app .flex-0 {
+    flex: 0;
+}
+
+/* Autocode: min-height = form control height only (no help block space) */
+.wm-app .app-composite-widget {
+    min-height: auto;
+}
+
+.wm-app .app-composite-widget.caption-floating .control-label{
+    top: calc(calc(100% * 0.5) - calc(var(--wm-form-control-font-size) * 0.65) - var(--wm-form-control-border-width))
+}
+
+/* Remove margin-top for caption-floating (Wave + autocode) */
+.wm-app .app-composite-widget.caption-floating {
+    margin-top: 0;
+}
+
+.wm-app .app-list-item {
+    background-color: transparent;
+}
+
+.wm-app .rounded-xs {
+    border-radius: var(--wm-radius-xs);
+}
+
+.wm-app .rounded-xxs {
+    border-radius: var(--wm-radius-xxs);
+}
+
+.wm-app .app-search.input-group .form-control{
+    height : 100%
+}
+
+.app-wizard-actions.panel-footer {
+    --wm-panel-footer-padding: 0;
+    --wm-panel-footer-border-width: 0;
+}

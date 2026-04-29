@@ -1,0 +1,65 @@
+[ {
+  "name" : "Common",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "Container668828139",
+  "type" : "HEADER",
+  "params" : [ ]
+}, {
+  "name" : "Dashboard",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Documents_Upload",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Header6688210374",
+  "type" : "HEADER",
+  "params" : [ ]
+}, {
+  "name" : "Landing_Page",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Login",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Main",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Navigation_Rail",
+  "type" : "LEFTNAV",
+  "params" : [ ]
+}, {
+  "name" : "Personal_Details",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Top_Nav6681024525",
+  "type" : "HEADER",
+  "params" : [ ]
+}, {
+  "name" : "footer",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "header",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "leftnav",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "rightnav",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "topnav",
+  "type" : "PARTIAL",
+  "params" : [ ]
+} ]

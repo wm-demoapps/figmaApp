@@ -1,0 +1,88 @@
+
+    .container_1 {flex: 1 0 0;}
+  
+    .image {background: url(resources/images/imagelists/landing_page/image.png) transparent    no-repeat;background-size: cover;}
+  
+					.customer_text { font-style:normal;text-align:center; }
+				
+					.subheading_part_1 { font-style:normal;text-align:center; }
+				
+					.subheading_part_2 { flex:1 0 0;font-style:normal;text-align:center; }
+				
+					.subheading_part_3 { align-self:stretch;font-style:normal;text-align:center; }
+				
+					.description { display:flex;flex-direction:column;font-style:normal;height:40px;justify-content:center;text-align:center;width:574px; }
+				
+    .search_container {border: 2px solid var(--Schemes-Inverse-Primary, #D08CFF);}
+  
+					.input_text { font-style:normal; }
+				
+					.why_us_title { font-style:normal;text-align:center; }
+				
+					.why_us_description { align-self:stretch;font-style:normal;text-align:center;text-transform:capitalize; }
+				
+    .loan_options {align-items: center;align-self: stretch;display: flex;flex: 1 0 0;gap: 32px;justify-content: center;}
+  
+    .loan_option {background: url(resources/images/imagelists/landing_page/loan_option.png) transparent    no-repeat;box-shadow: 0 8px 35px 0 rgba(0, 0, 0, 0.11);flex: 1 0 0;background-size: cover;}
+  
+					.loan_consolidation { align-self:stretch;font-style:normal; }
+				
+					.imagine_being_debt_f { align-self:stretch;font-style:normal; }
+				
+    .loan_option_stats {align-items: center;align-self: stretch;display: flex;gap: 16px;}
+  
+					.stat_1_text { font-style:normal; }
+				
+					.stat_2_text { font-style:normal; }
+				
+					.stat_3_text { font-style:normal; }
+				
+    .loan_option_1 {background: url(resources/images/imagelists/landing_page/loan_option_1.png) transparent    no-repeat;box-shadow: 0 8px 35px 0 rgba(0, 0, 0, 0.11);flex: 1 0 0;background-size: cover;}
+  
+					.loan_consolidation_1 { align-self:stretch;font-style:normal; }
+				
+					.imagine_being_debt_f_1 { align-self:stretch;font-style:normal; }
+				
+    .loan_option_stats_1 {align-items: center;align-self: stretch;display: flex;gap: 16px;}
+  
+					.stat_1_text_1 { font-style:normal; }
+				
+					.stat_2_text_1 { font-style:normal; }
+				
+					.stat_3_text_1 { font-style:normal; }
+				
+    .loan_option_2 {background: url(resources/images/imagelists/landing_page/loan_option_2.png) transparent    no-repeat;box-shadow: 0 8px 35px 0 rgba(0, 0, 0, 0.11);flex: 1 0 0;background-size: cover;}
+  
+					.loan_consolidation_2 { align-self:stretch;font-style:normal; }
+				
+					.imagine_being_debt_f_2 { align-self:stretch;font-style:normal; }
+				
+    .loan_option_stats_2 {align-items: center;align-self: stretch;display: flex;gap: 16px;}
+  
+					.stat_1_text_2 { font-style:normal; }
+				
+					.stat_2_text_2 { font-style:normal; }
+				
+					.stat_3_text_2 { font-style:normal; }
+				
+					.pricing___plans { font-style:normal;text-transform:capitalize;width:539px; }
+				
+    .footer_links {flex: 1 0 0;}
+  
+    .footer_brand_info {flex: 1 0 0;}
+  
+					.footer_description { align-self:stretch;font-style:normal;height:66px; }
+				
+    .navigation_links {flex: 1 0 0;}
+  
+					.help_menu { align-self:stretch;font-style:normal; }
+				
+    .help_links {flex: 1 0 0;}
+  
+					.help_menu_1 { align-self:stretch;font-style:normal; }
+				
+    .resources_links {flex: 1 0 0;}
+  
+					.help_menu_2 { align-self:stretch;font-style:normal; }
+				
+.wm-page.wm-page-gap { gap: 48px; }

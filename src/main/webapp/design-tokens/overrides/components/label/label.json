@@ -1,0 +1,505 @@
+{
+  "label": {
+    "appearances": {
+      "section-subtitle": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "36px"
+          },
+          "font-weight": {
+            "value": "700"
+          },
+          "line-height": {
+            "value": "44px /* 122.222% */"
+          }
+        }
+      },
+      "section-description": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.variant.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "16px"
+          },
+          "font-weight": {
+            "value": "400"
+          },
+          "line-height": {
+            "value": "24px /* 150% */"
+          }
+        }
+      },
+      "login-title": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.@.value}"
+          },
+          "font-family": {
+            "value": "Inter"
+          },
+          "font-size": {
+            "value": "22px"
+          },
+          "font-weight": {
+            "value": "700"
+          },
+          "line-height": {
+            "value": "28px /* 127.273% */"
+          }
+        }
+      },
+      "description-1": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "{label.medium.font-size.value}"
+          },
+          "font-weight": {
+            "value": "600"
+          },
+          "letter-spacing": {
+            "value": "{h4.letter-spacing.value}"
+          },
+          "line-height": {
+            "value": "{label.medium.line-height.value}"
+          }
+        }
+      },
+      "title": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "18px"
+          },
+          "font-weight": {
+            "value": "700"
+          },
+          "letter-spacing": {
+            "value": "0.15px"
+          },
+          "line-height": {
+            "value": "24px /* 133.333% */"
+          }
+        }
+      },
+      "personal-details": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "28px"
+          },
+          "font-weight": {
+            "value": "700"
+          },
+          "line-height": {
+            "value": "36px /* 128.571% */"
+          }
+        }
+      },
+      "please-enter-your-pe": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.variant.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "14px"
+          },
+          "font-weight": {
+            "value": "500"
+          },
+          "letter-spacing": {
+            "value": "0.1px"
+          },
+          "line-height": {
+            "value": "20px /* 142.857% */"
+          }
+        }
+      },
+      "document-description": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "{label.large.font-size.value}"
+          },
+          "font-weight": {
+            "value": "600"
+          },
+          "letter-spacing": {
+            "value": "{label.large.letter-spacing.value}"
+          },
+          "line-height": {
+            "value": "{label.large.line-height.value}"
+          }
+        }
+      },
+      "document-file-name": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.variant.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "14px"
+          },
+          "font-weight": {
+            "value": "300"
+          },
+          "line-height": {
+            "value": "20px /* 142.857% */"
+          }
+        }
+      },
+      "customer-text": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "12px"
+          },
+          "font-weight": {
+            "value": "500"
+          },
+          "line-height": {
+            "value": "16px /* 133.333% */"
+          }
+        }
+      },
+      "subheading-part-1": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "60px"
+          },
+          "font-weight": {
+            "value": "700"
+          },
+          "letter-spacing": {
+            "value": "-0.25px"
+          },
+          "line-height": {
+            "value": "78px /* 130% */"
+          }
+        }
+      },
+      "input-text": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "14px"
+          },
+          "font-weight": {
+            "value": "300"
+          },
+          "line-height": {
+            "value": "20px /* 142.857% */"
+          }
+        }
+      },
+      "why-us-title": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.variant.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "{label.medium.font-size.value}"
+          },
+          "font-weight": {
+            "value": "600"
+          },
+          "letter-spacing": {
+            "value": "{h4.letter-spacing.value}"
+          },
+          "line-height": {
+            "value": "{label.medium.line-height.value}"
+          }
+        }
+      },
+      "stat-1-text": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "12px"
+          },
+          "font-weight": {
+            "value": "400"
+          },
+          "line-height": {
+            "value": "18px /* 150% */"
+          }
+        }
+      },
+      "pricing-plans": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-primary.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "36px"
+          },
+          "font-weight": {
+            "value": "700"
+          },
+          "line-height": {
+            "value": "44px /* 122.222% */"
+          }
+        }
+      },
+      "payment-status": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.variant.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "12px"
+          },
+          "font-weight": {
+            "value": "400"
+          },
+          "line-height": {
+            "value": "18px /* 150% */"
+          }
+        }
+      },
+      "auto-pay-status": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-primary.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "8px"
+          },
+          "font-weight": {
+            "value": "700"
+          },
+          "letter-spacing": {
+            "value": "0.5px"
+          },
+          "line-height": {
+            "value": "16px /* 200% */"
+          }
+        }
+      },
+      "amount-paid-value": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "24px"
+          },
+          "font-weight": {
+            "value": "400"
+          },
+          "letter-spacing": {
+            "value": "-0.5px"
+          },
+          "line-height": {
+            "value": "32px /* 133.333% */"
+          }
+        }
+      },
+      "amount-remaining-value": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "14px"
+          },
+          "font-weight": {
+            "value": "500"
+          },
+          "letter-spacing": {
+            "value": "0.1px"
+          },
+          "line-height": {
+            "value": "20px /* 142.857% */"
+          }
+        }
+      },
+      "application-id": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.variant.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "{label.large.font-size.value}"
+          },
+          "font-weight": {
+            "value": "600"
+          },
+          "letter-spacing": {
+            "value": "{label.large.letter-spacing.value}"
+          },
+          "line-height": {
+            "value": "{label.large.line-height.value}"
+          }
+        }
+      },
+      "milestone-reward-4": {
+        "mapping": {
+          "color": {
+            "value": "{color.on-surface.@.value}"
+          },
+          "font-family": {
+            "value": "\"DM Sans\""
+          },
+          "font-size": {
+            "value": "8px"
+          },
+          "font-weight": {
+            "value": "700"
+          },
+          "letter-spacing": {
+            "value": "0.5px"
+          },
+          "line-height": {
+            "value": "16px /* 200% */"
+          }
+        }
+      }
+    },
+    "meta": {
+      "appearances": {
+        "section-subtitle": {
+          "source": "user"
+        },
+        "section-description": {
+          "source": "user"
+        },
+        "login-title": {
+          "source": "user"
+        },
+        "description-1": {
+          "source": "user"
+        },
+        "title": {
+          "source": "user"
+        },
+        "personal-details": {
+          "source": "user"
+        },
+        "please-enter-your-pe": {
+          "source": "user"
+        },
+        "document-description": {
+          "source": "user"
+        },
+        "document-file-name": {
+          "source": "user"
+        },
+        "customer-text": {
+          "source": "user"
+        },
+        "subheading-part-1": {
+          "source": "user"
+        },
+        "input-text": {
+          "source": "user"
+        },
+        "why-us-title": {
+          "source": "user"
+        },
+        "stat-1-text": {
+          "source": "user"
+        },
+        "pricing-plans": {
+          "source": "user"
+        },
+        "payment-status": {
+          "source": "user"
+        },
+        "auto-pay-status": {
+          "source": "user"
+        },
+        "amount-paid-value": {
+          "source": "user"
+        },
+        "amount-remaining-value": {
+          "source": "user"
+        },
+        "application-id": {
+          "source": "user"
+        },
+        "milestone-reward-4": {
+          "source": "user"
+        }
+      }
+    }
+  }
+}

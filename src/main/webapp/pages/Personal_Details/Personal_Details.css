@@ -1,0 +1,72 @@
+
+    .container_2 {align-items: flex-start;align-self: stretch;display: flex;}
+  
+    .progress_container {align-items: flex-start;align-self: stretch;background: var(--Schemes-Surface-Container-Highest, #F8F9FD);display: flex;flex-direction: column;gap: 24px;padding: 44px 52px 0 84px;width: 409px;}
+  
+    .container_3 {flex: 1 0 0;}
+  
+    .personal_details_container {flex: 1 0 0;}
+  
+					.personal_details { align-self:stretch;font-style:normal; }
+				
+					.please_enter_your_pe { align-self:stretch;font-style:normal; }
+				
+    .documents_list {flex: 1 0 0;}
+  
+					.documents_list_title { align-self:stretch;font-style:normal; }
+				
+    .document_item {border: 1px solid var(--Schemes-Outline, #E5E5EC);}
+  
+					.document_description { flex:1 0 0;font-style:normal; }
+				
+					.document_file_name { font-style:normal;text-decoration-line:underline;text-decoration-skip-ink:none;text-decoration-style:solid;text-decoration-thickness:auto;text-underline-offset:auto;text-underline-position:from-font; }
+				
+    .document_item_1 {border: 1px solid var(--Schemes-Outline, #E5E5EC);}
+  
+    .document_description_container {flex: 1 0 0;}
+  
+					.document_name { font-style:normal; }
+				
+					.document_details { font-style:normal; }
+				
+					.document_file_name_1 { font-style:normal;text-decoration-line:underline;text-decoration-skip-ink:none;text-decoration-style:solid;text-decoration-thickness:auto;text-underline-offset:auto;text-underline-position:from-font; }
+				
+    .document_item_3 {border: 1px solid var(--Schemes-Outline, #E5E5EC);}
+  
+    .document_description_container_1 {flex: 1 0 0;}
+  
+					.document_name_1 { font-style:normal; }
+				
+					.document_details_1 { font-style:normal; }
+				
+					.document_file_name_2 { font-style:normal;text-decoration-line:underline;text-decoration-skip-ink:none;text-decoration-style:solid;text-decoration-thickness:auto;text-underline-offset:auto;text-underline-position:from-font; }
+				
+    .document_item_4 {border: 1px solid var(--Schemes-Outline, #E5E5EC);}
+  
+					.document_description_1 { flex:1 0 0;font-style:normal; }
+				
+    .document_item_5 {border: 1px solid var(--Schemes-Outline, #E5E5EC);}
+  
+					.document_description_2 { flex:1 0 0;font-style:normal; }
+				
+					.document_file_name_3 { font-style:normal;text-decoration-line:underline;text-decoration-skip-ink:none;text-decoration-style:solid;text-decoration-thickness:auto;text-underline-offset:auto;text-underline-position:from-font; }
+				
+    .footer_container {border-radius: var(--Corner-None, 0) var(--Corner-None, 0) var(--Corner-Small, 8px) var(--Corner-Small, 8px);border-top: 1px solid var(--Schemes-Outline, #E5E5EC);flex-shrink: 0;}
+  
+    .footer_actions_container {flex: 1 0 0;}
+  
+
+    .container_2 {align-items: flex-start;align-self: stretch;display: flex;}
+  
+    .progress_container {align-items: flex-start;align-self: stretch;background: var(--Schemes-Surface-Container-Highest, #F8F9FD);display: flex;flex-direction: column;gap: 24px;padding: 44px 52px 0 84px;width: 409px;}
+  
+					.personal_details_1 { align-self:stretch;font-style:normal; }
+				
+					.please_enter_your_pe { align-self:stretch;font-style:normal; }
+				
+    .personal_details_form {flex: 1 0 0;}
+  
+    .input_fields_container {flex: 1 0 0;}
+  
+    .footer_container {border-radius: var(--Corner-None, 0) var(--Corner-None, 0) var(--Corner-Small, 8px) var(--Corner-Small, 8px);border-top: 1px solid var(--Schemes-Outline, #E5E5EC);}
+  
