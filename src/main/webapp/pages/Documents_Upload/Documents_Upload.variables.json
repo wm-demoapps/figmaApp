@@ -1,1 +1,89 @@
-{}
+{
+  "deleteDocVariable" : {
+    "_id" : "wm-deleteDocVariable-wm.ServiceVariable-1777439786229",
+    "name" : "deleteDocVariable",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "id",
+      "value" : "",
+      "type" : "integer"
+    } ],
+    "type" : "void",
+    "service" : "LoanCorpAPI",
+    "operation" : "LoanCorpAPI_LoanDocController_deleteLoanDoc",
+    "operationId" : "LoanCorpAPI_LoanDocController_deleteLoanDoc",
+    "operationType" : "delete",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "controller" : "LoanDoc"
+  },
+  "loanDocsVariable" : {
+    "_id" : "wm-loanDocsVariable-wm.ServiceVariable-1777439778384",
+    "name" : "loanDocsVariable",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "q",
+      "value" : "",
+      "type" : "string"
+    }, {
+      "target" : "page",
+      "value" : "0",
+      "type" : "integer"
+    }, {
+      "target" : "size",
+      "value" : "20",
+      "type" : "integer"
+    }, {
+      "target" : "sort",
+      "value" : "",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.figmaapp.LoanCorpAPI.LoanDoc",
+    "service" : "LoanCorpAPI",
+    "operation" : "LoanCorpAPI_LoanDocController_findLoanDocs",
+    "operationId" : "LoanCorpAPI_LoanDocController_findLoanDocs",
+    "operationType" : "get",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "controller" : "LoanDoc"
+  },
+  "uploadDocVariable" : {
+    "_id" : "wm-uploadDocVariable-wm.ServiceVariable-1777439783176",
+    "name" : "uploadDocVariable",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "LoanDoc",
+      "value" : "",
+      "type" : "com.wavemaker.loancorpservices.LoanDoc"
+    } ],
+    "type" : "com.wavemaker.figmaapp.LoanCorpAPI.LoanDoc",
+    "service" : "LoanCorpAPI",
+    "operation" : "LoanCorpAPI_LoanDocController_createLoanDoc",
+    "operationId" : "LoanCorpAPI_LoanDocController_createLoanDoc",
+    "operationType" : "post",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "controller" : "LoanDoc"
+  }
+}

@@ -1,1 +1,149 @@
-{"autoModelLandingPage0":{"dataBinding":[],"dataSet":[{"picturesource1":"resources/images/imagelists/landing_page/loan_option_icon.png","caption2":"Loan Consolidation","caption3":"Combine multiple loans into one simple payment and manage your finances.","picturesource4":"resources/images/imagelists/landing_page/stat_1_icon.png","caption5":"Upto 75K","picturesource6":"resources/images/imagelists/landing_page/stat_2_icon.png","caption7":"Till 5Y","picturesource8":"resources/images/imagelists/landing_page/stat_3_icon.png","caption9":"8-10%","caption10":"Apply Now","iconclass10":"mi mi-arrow-forward","backgroundimage11":"resources/images/imagelists/landing_page/loan_option.png"},{"picturesource1":"resources/images/imagelists/landing_page/loan_option_icon_1.png","caption2":"Home Improvement","caption3":"Upgrade your home without stretching your budget with flexible options.","picturesource4":"resources/images/imagelists/landing_page/stat_1_icon_1.png","caption5":"Upto 75K","picturesource6":"resources/images/imagelists/landing_page/stat_2_icon_1.png","caption7":"Till 5Y","picturesource8":"resources/images/imagelists/landing_page/stat_3_icon_1.png","caption9":"8-10%","caption10":"Apply Now","iconclass10":"mi mi-arrow-forward","backgroundimage11":"resources/images/imagelists/landing_page/loan_option_1.png"},{"picturesource1":"resources/images/imagelists/landing_page/loan_option_icon_2.png","caption2":"Wedding","caption3":"Invest in your future with easy financing for education and skill-building.","picturesource4":"resources/images/imagelists/landing_page/stat_1_icon_2.png","caption5":"Upto 75K","picturesource6":"resources/images/imagelists/landing_page/stat_2_icon_2.png","caption7":"Till 5Y","picturesource8":"resources/images/imagelists/landing_page/stat_3_icon_2.png","caption9":"8-10%","caption10":"Apply Now","iconclass10":"mi mi-arrow-forward","backgroundimage11":"resources/images/imagelists/landing_page/loan_option_2.png"}],"type":"entry","isList":true,"twoWayBinding":false,"saveInPhonegap":false,"_id":"wm-autoModelLandingPage0-wm.Variable-1777438606289","name":"autoModelLandingPage0","category":"wm.Variable"},"autoModelLandingPage1":{"dataBinding":[],"dataSet":[{"picturesource1":"bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource4","caption2":"bind:Variables.autoModelLandingPage0.dataSet[$i].caption5"},{"picturesource1":"bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource6","caption2":"bind:Variables.autoModelLandingPage0.dataSet[$i].caption7"},{"picturesource1":"bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource8","caption2":"bind:Variables.autoModelLandingPage0.dataSet[$i].caption9"}],"type":"entry","isList":true,"twoWayBinding":false,"saveInPhonegap":false,"_id":"wm-autoModelLandingPage1-wm.Variable-1777438606657","name":"autoModelLandingPage1","category":"wm.Variable"},"autoModelLandingPage2":{"dataBinding":[],"dataSet":[{"picturesource1":"bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource4","caption2":"bind:Variables.autoModelLandingPage0.dataSet[$i].caption5"},{"picturesource1":"bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource6","caption2":"bind:Variables.autoModelLandingPage0.dataSet[$i].caption7"},{"picturesource1":"bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource8","caption2":"bind:Variables.autoModelLandingPage0.dataSet[$i].caption9"}],"type":"entry","isList":true,"twoWayBinding":false,"saveInPhonegap":false,"_id":"wm-autoModelLandingPage2-wm.Variable-1777438607114","name":"autoModelLandingPage2","category":"wm.Variable"},"autoModelLandingPage3":{"dataBinding":[],"dataSet":[{"picturesource1":"bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource4","caption2":"bind:Variables.autoModelLandingPage0.dataSet[$i].caption5"},{"picturesource1":"bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource6","caption2":"bind:Variables.autoModelLandingPage0.dataSet[$i].caption7"},{"picturesource1":"bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource8","caption2":"bind:Variables.autoModelLandingPage0.dataSet[$i].caption9"}],"type":"entry","isList":true,"twoWayBinding":false,"saveInPhonegap":false,"_id":"wm-autoModelLandingPage3-wm.Variable-1777438607480","name":"autoModelLandingPage3","category":"wm.Variable"}}
+{
+  "autoModelLandingPage0" : {
+    "_id" : "wm-autoModelLandingPage0-wm.Variable-1777438606289",
+    "name" : "autoModelLandingPage0",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "picturesource1" : "resources/images/imagelists/landing_page/loan_option_icon.png",
+      "caption2" : "Loan Consolidation",
+      "caption3" : "Combine multiple loans into one simple payment and manage your finances.",
+      "picturesource4" : "resources/images/imagelists/landing_page/stat_1_icon.png",
+      "caption5" : "Upto 75K",
+      "picturesource6" : "resources/images/imagelists/landing_page/stat_2_icon.png",
+      "caption7" : "Till 5Y",
+      "picturesource8" : "resources/images/imagelists/landing_page/stat_3_icon.png",
+      "caption9" : "8-10%",
+      "caption10" : "Apply Now",
+      "iconclass10" : "mi mi-arrow-forward",
+      "backgroundimage11" : "resources/images/imagelists/landing_page/loan_option.png"
+    }, {
+      "picturesource1" : "resources/images/imagelists/landing_page/loan_option_icon_1.png",
+      "caption2" : "Home Improvement",
+      "caption3" : "Upgrade your home without stretching your budget with flexible options.",
+      "picturesource4" : "resources/images/imagelists/landing_page/stat_1_icon_1.png",
+      "caption5" : "Upto 75K",
+      "picturesource6" : "resources/images/imagelists/landing_page/stat_2_icon_1.png",
+      "caption7" : "Till 5Y",
+      "picturesource8" : "resources/images/imagelists/landing_page/stat_3_icon_1.png",
+      "caption9" : "8-10%",
+      "caption10" : "Apply Now",
+      "iconclass10" : "mi mi-arrow-forward",
+      "backgroundimage11" : "resources/images/imagelists/landing_page/loan_option_1.png"
+    }, {
+      "picturesource1" : "resources/images/imagelists/landing_page/loan_option_icon_2.png",
+      "caption2" : "Wedding",
+      "caption3" : "Invest in your future with easy financing for education and skill-building.",
+      "picturesource4" : "resources/images/imagelists/landing_page/stat_1_icon_2.png",
+      "caption5" : "Upto 75K",
+      "picturesource6" : "resources/images/imagelists/landing_page/stat_2_icon_2.png",
+      "caption7" : "Till 5Y",
+      "picturesource8" : "resources/images/imagelists/landing_page/stat_3_icon_2.png",
+      "caption9" : "8-10%",
+      "caption10" : "Apply Now",
+      "iconclass10" : "mi mi-arrow-forward",
+      "backgroundimage11" : "resources/images/imagelists/landing_page/loan_option_2.png"
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "autoModelLandingPage1" : {
+    "_id" : "wm-autoModelLandingPage1-wm.Variable-1777438606657",
+    "name" : "autoModelLandingPage1",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "picturesource1" : "bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource4",
+      "caption2" : "bind:Variables.autoModelLandingPage0.dataSet[$i].caption5"
+    }, {
+      "picturesource1" : "bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource6",
+      "caption2" : "bind:Variables.autoModelLandingPage0.dataSet[$i].caption7"
+    }, {
+      "picturesource1" : "bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource8",
+      "caption2" : "bind:Variables.autoModelLandingPage0.dataSet[$i].caption9"
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "autoModelLandingPage2" : {
+    "_id" : "wm-autoModelLandingPage2-wm.Variable-1777438607114",
+    "name" : "autoModelLandingPage2",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "picturesource1" : "bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource4",
+      "caption2" : "bind:Variables.autoModelLandingPage0.dataSet[$i].caption5"
+    }, {
+      "picturesource1" : "bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource6",
+      "caption2" : "bind:Variables.autoModelLandingPage0.dataSet[$i].caption7"
+    }, {
+      "picturesource1" : "bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource8",
+      "caption2" : "bind:Variables.autoModelLandingPage0.dataSet[$i].caption9"
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "autoModelLandingPage3" : {
+    "_id" : "wm-autoModelLandingPage3-wm.Variable-1777438607480",
+    "name" : "autoModelLandingPage3",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "picturesource1" : "bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource4",
+      "caption2" : "bind:Variables.autoModelLandingPage0.dataSet[$i].caption5"
+    }, {
+      "picturesource1" : "bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource6",
+      "caption2" : "bind:Variables.autoModelLandingPage0.dataSet[$i].caption7"
+    }, {
+      "picturesource1" : "bind:Variables.autoModelLandingPage0.dataSet[$i].picturesource8",
+      "caption2" : "bind:Variables.autoModelLandingPage0.dataSet[$i].caption9"
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "loanTypesLandingVariable" : {
+    "_id" : "wm-loanTypesLandingVariable-wm.ServiceVariable-1777439842262",
+    "name" : "loanTypesLandingVariable",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "q",
+      "value" : "",
+      "type" : "string"
+    }, {
+      "target" : "page",
+      "value" : "",
+      "type" : "integer"
+    }, {
+      "target" : "size",
+      "value" : "",
+      "type" : "integer"
+    }, {
+      "target" : "sort",
+      "value" : "",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.figmaapp.LoanCorpAPI.LoanType",
+    "service" : "LoanCorpAPI",
+    "operation" : "LoanCorpAPI_LoanTypeController_findLoanTypes",
+    "operationId" : "LoanCorpAPI_LoanTypeController_findLoanTypes",
+    "operationType" : "get",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "controller" : "LoanType"
+  }
+}

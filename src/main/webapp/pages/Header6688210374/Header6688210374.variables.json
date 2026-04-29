@@ -1,1 +1,39 @@
-{}
+{
+  "loanTypesHeaderVariable" : {
+    "_id" : "wm-loanTypesHeaderVariable-wm.ServiceVariable-1777439842267",
+    "name" : "loanTypesHeaderVariable",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "q",
+      "value" : "",
+      "type" : "string"
+    }, {
+      "target" : "page",
+      "value" : "",
+      "type" : "integer"
+    }, {
+      "target" : "size",
+      "value" : "",
+      "type" : "integer"
+    }, {
+      "target" : "sort",
+      "value" : "",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.figmaapp.LoanCorpAPI.LoanType",
+    "service" : "LoanCorpAPI",
+    "operation" : "LoanCorpAPI_LoanTypeController_findLoanTypes",
+    "operationId" : "LoanCorpAPI_LoanTypeController_findLoanTypes",
+    "operationType" : "get",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "controller" : "LoanType"
+  }
+}

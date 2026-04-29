@@ -1,1 +1,27 @@
-{}
+{
+  "loggedInPersonVariable" : {
+    "_id" : "wm-loggedInPersonVariable-wm.ServiceVariable-1777439842264",
+    "name" : "loggedInPersonVariable",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "email",
+      "value" : "bind:Variables.loggedInUser.dataSet.name",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.figmaapp.LoanCorpAPI.Person",
+    "service" : "LoanCorpAPI",
+    "operation" : "LoanCorpAPI_PersonController_getPerson",
+    "operationId" : "LoanCorpAPI_PersonController_getPerson",
+    "operationType" : "get",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "controller" : "Person"
+  }
+}
